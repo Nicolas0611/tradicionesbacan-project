@@ -1,0 +1,21 @@
+header{
+    z-index: 1;
+    position: fixed;
+    height: 110px;
+    width: 100%;
+    background-color: #ffff
+}
+.nav-link{
+    font-size: 18px;
+    color:black;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav-item{
+    padding: 0 60px ;
+}
+.nav-menu-link:hover{
+    background-color: #5293F0;
+    border-radius: 7px;
+    color: white;
+    transition: 0.5s;
+}

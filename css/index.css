@@ -1,0 +1,227 @@
+/*.nav{
+    background-color: #ffffff;
+    text-align: center;
+    font-family: sans-serif;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display:flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+.nav-link{
+    color: black;
+    text-decoration: none;
+}
+.logo{
+    padding: 0 100px 0;
+    line-height: 100px;
+}
+.nav-menu{
+    display: flex;
+    margin-right: 100px;
+    list-style: none;
+}
+.nav-menu-item{
+    font-size: 18px;
+    margin: 30px 8px 0;
+    text-transform: uppercase;
+    width: max-content;
+}
+.nav-menu-link:hover{
+    background-color: #5293F0;
+    border-radius: 5px;
+    transition: 0.5s;
+    color: white;
+}
+b.nav-menu-link{
+    text-decoration:underline black;
+}
+*/
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+h2{
+    font-size: 52px;
+    color: #000F55;
+    font-family: 'Montserrat', sans-serif;
+}
+h3{
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+h4{
+    font-size: 24px;
+    color: black;;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+h5{
+    font-size: 18px;
+    color: black;
+}
+#ReviveLaTradicion{
+    height: 1024px;
+    text-align: left;
+    background-color: #90B4F0; 
+}
+#ReviveLaTradicionT{
+    position: absolute;
+    font-size: 18px;
+    top: 35%;
+    left: 10%;
+    width: 620px;
+    color: #ffffff;
+}
+#boton{
+    border:  none;
+    background-color: #F8F496;
+    color: black;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 16px;
+    height: 84px;
+    width: 286px;
+    border-radius: 34px;
+}
+#Portadaimg{
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+#ProductosDestacados{
+    height: 1024px;
+    background-image: url(/images/Fondo_blando_puntos.png);
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+}
+#ProductosDestacadosT1{
+    position: relative;
+    top: 15%;
+    text-align: center;
+}
+#ProductosDestacadosT{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    position: relative;
+    margin-left: 15%;
+    margin-right: 15%;
+    top: 22%;
+}
+#Producto1{
+    background-color: #F2F2F2;
+    border-radius: 23px;
+    width: 350px;
+}
+#Producto2{
+    background-color: #F2F2F2;
+    border-radius: 23px;
+    width: 350px;
+}
+#Producto3{
+    background-color: #F2F2F2;
+    border-radius: 23px;
+    width: 350px;
+}
+#Producto1T{
+    width: 260px;
+    margin: auto;
+}
+#Producto2T{
+    width: 260px;
+    margin: auto;
+}
+#Producto3T{
+    width: 260px;
+    margin: auto;
+}
+#Producto1img{
+    width: 350px;
+}
+#Producto2img{
+    width: 350px;
+}
+#Producto3img{
+    width: 350px;
+}
+#PreguntasFrecuentes{
+    background-color: #F8F496;
+    height: 1024px;
+    text-align: left;
+    font-size: 18px;
+}
+#PreguntasFrecuentesT{
+    width: 620px;
+    float: right;
+    top: 12%;
+    right: 20%;
+    position: relative;
+}
+#Preguntasimg{
+    position: relative;
+    top: 12%;
+}
+#NuestrosClientes{
+    background-color: #ffffff;
+    height: 1024px;
+    font-size: 18px;
+}
+#NuestrosClientesT{
+    position: relative;
+    top: 20%;
+    text-align: center;
+    color: #000F55;
+}
+#NuestrosClientesT1{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    top: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#Cliente1{
+    width: 400px;
+    color: #828282;
+    position: relative;
+    text-align: left;
+}
+#Cliente2{
+    width: 400px;
+    color: #828282;
+    position: relative;
+    text-align: left;
+}
+#NuestrosClientesT2{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    top: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#Cliente3{
+    width: 400px;
+    color: #828282;
+    position: relative;
+    text-align: left;
+}
+#Cliente4{
+    width: 400px;
+    color: #828282;
+    position: relative;
+    text-align: left;
+}
