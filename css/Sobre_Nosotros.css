@@ -7,7 +7,9 @@
     height: 1024px;
     text-align: center;
     font-size: 40px;
-    background-image: url(/images/Nuestra_empresa.png);
+    background-image: url(/tradicionesbacan-project/images/Nuestra_empresa.png);
+    background-size: cover;
+    background-position: center;
     display: flex;
 }
 #NempresaT{
@@ -20,8 +22,9 @@
 #IempresarialMega{
     height: 1024px;
     font-size: 30px;
-    background-image: url(/images/Fondo_blanco_hexagonos.png);
-    background-size: contain;
+    background-image: url(/tradicionesbacan-project/images/Fondo_blanco_hexagonos.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #IempresarialT{
     position: relative;
@@ -119,4 +122,70 @@ h4{
 p{
     margin-bottom: 0%;
     text-align: center;
+}
+@media screen and (max-width: 1000px){
+    #IempresarialT{
+        position: relative;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        top: 30%;
+    }
+    #MEGAT{
+        position: relative;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        top: 35%;
+    }
+    #VisionCuadro{
+        position: relative;
+        top: 25%;
+        background-color: #ffffff;
+        height: 500px;
+        width: 435px;
+        border-radius: 42px;
+        box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
+    }
+    #MisionCuadro{
+        position: relative;
+        top: 25%;
+        background-color: #ffffff;
+        height: 500px;
+        width: 435px;
+        border-radius: 42px;
+        box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
+    }
+    #Vision{
+        position: relative;
+        top: 10%;
+        width: 88%;
+        margin: auto;
+    }
+    #Mision{
+        position: relative;
+        top: 10%;
+        width: 88%;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 900px){
+    #VisionCuadro{
+        position: relative;
+        top: 25%;
+        background-color: #ffffff;
+        height: 530px;
+        width: 390px;
+        border-radius: 42px;
+        box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
+    }
+    #MisionCuadro{
+        position: relative;
+        top: 25%;
+        background-color: #ffffff;
+        height: 530px;
+        width: 390px;
+        border-radius: 42px;
+        box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
+    }
 }
