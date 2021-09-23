@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/Navbar.css" />
-    
+
     <!--Fuentes de texto-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -105,7 +105,10 @@
               <p>Nombre* </p>
             </div>
             <div class="container-imput">
-              <input type="text">
+              <input type="text" id="txtnombre" required>
+              <div class="invalid-feedback">
+                Por favor ingrece los datos necesarios.
+              </div>
             </div>
           </div>
           <div class="rows-forms">
@@ -113,7 +116,7 @@
               <p>Celular* </p>
             </div>
             <div class="container-imput">
-              <input type="text">
+              <input type="number" id= "txtcelular">
             </div>
           </div>
           <div class="rows-forms">
@@ -121,7 +124,7 @@
               <p>Correo* </p>
             </div>
             <div class="container-imput">
-              <input type="text">
+              <input type="email" id="txtcorreo">
             </div>
           </div>
           <div class="rows-forms">
@@ -129,7 +132,7 @@
               <p>Asunto* </p>
             </div>
             <div class="container-imput">
-              <input type="text">
+              <input type="text" id="txtasunto">
             </div>
           </div>
           <div class="rows-forms">
@@ -137,11 +140,11 @@
               <p>Descripción* </p>
             </div>
             <div class="container-Text-area">
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control" id="txtdescripcion" rows="3"></textarea>
             </div>
           </div>
           <div class="contenedor-btn-enviar rows-forms">
-            <button type="button" class="btn btn-primary boton-enviar">Enviar</button>
+            <button type="button" class="btn btn-primary boton-enviar" id="btnSaveEnviar">Enviar</button>
           </div>
         </div>
       </div>
@@ -221,7 +224,10 @@
     
    
 
-<script
+
+
+
+   <script
   src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
   integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
   crossorigin="anonymous"
@@ -231,5 +237,10 @@
   integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
   crossorigin="anonymous"
 ></script>
+
+
+<script src="../js/json/datos.js"></script>
+<script src="../js/json/datoslogic.js"></script>
+<script src="../js/validacionform/validacion.js"></script>
 </body>
 </html>
