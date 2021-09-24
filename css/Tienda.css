@@ -2,18 +2,30 @@
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
     padding: 0px;
+    
+}
+body{
+    *background-image: url(https://static.vecteezy.com/system/resources/previews/002/079/185/non_2x/seamless-pattern-of-chocolate-chip-cookies-repetitive-background-of-sweet-round-biscuits-with-brown-cream-on-top-vector.jpg);
 }
 .titulo{
     padding: 150px 0 70px;
     font-size: 60px;
     text-align: center;
 }
+#pro{
+    
+}
 h4{
-    margin-top: 20px;
+    margin: 20px 0px 10px 0px;
     font-size: 24px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 h5{
     font-size: 18px;
+    margin-bottom: 10px;
 }
 .agregar a{
     width: 30px;
@@ -27,15 +39,18 @@ h5{
 }
 
 .imgproduct{
-    width: 290px;
+    width: 304px;
     height: 330px;
+    border-radius: 10px;
 }
 
 .contenido {
     width: 304px;
+    border-radius: 10px;
     flex-direction: column;
     margin: 10px;
     text-align: center;
+    background-color: #F2F2F2;
     color: rgb(0, 0, 0);
 }
 .agregar{
