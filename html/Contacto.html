@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- Bootstrap css -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
@@ -12,10 +11,11 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/tradicionesbacan-project/css/Sobre_Nosotros.css" />
-    <link rel="stylesheet" href="/tradicionesbacan-project/css/Navbar.css" />
-    <link rel="stylesheet" href="/tradicionesbacan-project/css/footer.css" />
-    <link rel="stylesheet" href="/tradicionesbacan-project/css/carrito.css"/>
+    
+    <link rel="stylesheet" href="../css/Contacto.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/Navbar.css" />
 
     <!--Fuentes de texto-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,9 +25,9 @@
       rel="stylesheet"
     />
 
-    <title>Sobre Nosotros</title>
+    <title>Tienda Bacan</title>
   </head>
-  <body>
+  
     <header class="header">
       <div class="container">
         <nav class="navbar navbar-expand-lg" style="background-color: #ffff">
@@ -50,31 +50,34 @@
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"> </span>
+              <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-menu-link nav-link" href="../index.html">Inicio</a>
+                  <a class="nav-menu-link nav-link" href="../index.html"
+                    ><b>Inicio</b></a
+                  >
                 </li>
                 <li class="nav-item">
                   <a
                     class="nav-menu-link nav-link"
                     aria-current="page"
                     href="../html/Sobre_Nosotros.html"
-                    ><b>Sobre Nosotros</b></a
+                    >Sobre Nosotros</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-menu-link nav-link" href="../html/Tienda.html"
+                  <a class="nav-menu-link nav-link" 
+                  href="../html/Tienda.html"
                     >Tienda</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-menu-link nav-link" href="#">Contacto</a>
+                  <a class="nav-menu-link nav-link" href="../html/Contacto.html">Contacto</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-menu-link nav-link" onclick="mostrarCarrito();" href="javascript:void(0);">
+                  <a class="nav-menu-link nav-link" href="#">
                     <img
                       src="../images/216477_shopping_cart_icon.png"
                       alt=""
@@ -89,73 +92,64 @@
         </nav>
       </div>
     </header>
-    <div id="Carrito">
-      <h4>Mi Carrito!</h4>
-    </div>
-    <div id="Nempresa">
-      <div id="NempresaT">
-        <h1><b>Nuestra Empresa</b></h1>
-        <h4>
-          Nosotros iniciamos labores en el año 2014 y constituimos la empresa
-          Tradiciones S.A.S en el año 2015.
-        </h4>
-      </div>
-    </div>
-    <div id="IempresarialMega">
-      <div id="IempresarialT">
-        <h2><b>Idea</b> Empresarial</h2>
-        <h4>
-          La idea surgió de la señora Angélica Bermúdez, su visión fue crear un
-          producto artesanal completamente colombiano y típico en la cultura de
-          este país. Decidió fabricar estos muñecos año viejo de un tamaño mucho
-          más reducido con la ayuda de su familia con el fin de fortalecer la
-          unión y demás valores en la tradición colombiana.
-        </h4>
-      </div>
-      <div id="MEGAT">
-        <h2><b>MEGA</b></h2>
-        <h4>
-          Para el año 2025 Tradiciones S.A.S será la empresa más conocida en el
-          país por conservar las tradiciones típicas de fin de año de la quema
-          de año viejo en Colombia.
-        </h4>
-      </div>
-    </div>
-    <div id="MisionMegaVision">
-      <div id="VisionCuadro">
-        <div id="Vision">
-          <h2><b>Vision</b></h2>
-          <p>
-            Se busca revivir la costumbre colombiana de la quema del año viejo
-            de una manera novedosa, innovadora, sencilla y práctica. Queremos la
-            satisfacción de nuestros clientes, que disfruten de esta costumbre
-            de forma más segura y en cualquier lugar en las fiestas típicas
-            colombianas.
-          </p>
+   <body>
+    <div class="img" >
+      <div class="container-formulario">
+        <div class="subcontenedor-form">
+          <div class="title-form">
+            <h3>¿Tienes preguntas? llena este formulario</h3>
+          </div>
+          <div class="linea"></div>
+          <div class="rows-forms">
+            <div class="container-P">
+              <p>Nombre* </p>
+            </div>
+            <div class="container-imput">
+              <input type="text" id="txtnombre" required>
+              <div class="invalid-feedback">
+                Por favor ingrece los datos necesarios.
+              </div>
+            </div>
+          </div>
+          <div class="rows-forms">
+            <div class="container-P">
+              <p>Celular* </p>
+            </div>
+            <div class="container-imput">
+              <input type="number" id= "txtcelular">
+            </div>
+          </div>
+          <div class="rows-forms">
+            <div class="container-P">
+              <p>Correo* </p>
+            </div>
+            <div class="container-imput">
+              <input type="email" id="txtcorreo">
+            </div>
+          </div>
+          <div class="rows-forms">
+            <div class="container-P">
+              <p>Asunto* </p>
+            </div>
+            <div class="container-imput">
+              <input type="text" id="txtasunto">
+            </div>
+          </div>
+          <div class="rows-forms">
+            <div class="container-P">
+              <p>Descripción* </p>
+            </div>
+            <div class="container-Text-area">
+              <textarea class="form-control" id="txtdescripcion" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="contenedor-btn-enviar rows-forms">
+            <button type="button" class="btn btn-primary boton-enviar" id="btnSaveEnviar">Enviar</button>
+          </div>
         </div>
       </div>
-      <div id="MisionCuadro">
-        <div id="Mision">
-          <h2><b>Mision</b></h2>
-          <p>
-            Se busca revivir la costumbre colombiana de la quema del año viejo
-            de una manera novedosa, innovadora, sencilla y práctica. Queremos la
-            satisfacción de nuestros clientes, que disfruten de esta costumbre
-            de forma más segura y en cualquier lugar en las fiestas típicas
-            colombianas.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div id="TienesPreguntas">
-      <div id="TienesPreguntasT">
-        <h1><b>¿Tienes Preguntas?</b></h1>
-        <h2>Escríbenos</h2>
-        <button id="WhatsApp" type="button">WhatsApp!</button>
-      </div>
-      <img id="TienesPreguntasimg" src="../images/TienesPreguntas.png" alt="" />
-    </div>
 
+    </div>
     <footer class="text-white" style="background-color: #000f55">
       <div class="container">
         <div class="row">
@@ -224,43 +218,29 @@
           </ul>
         </div>
       </div>
-    </footer>
-    <!-- scripts bootstrap -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Iconos -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   </body>
 
-    <!-- FIREBASE SCRIPTS-->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    
+    
+   
 
-    <script>
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyDN-SSy6iHLQkDNMWlr3MmEIaMEdQXBr-E",
-        authDomain: "productos-bacan.firebaseapp.com",
-        projectId: "productos-bacan",
-        storageBucket: "productos-bacan.appspot.com",
-        messagingSenderId: "158266501029",
-        appId: "1:158266501029:web:cde1d0bf064bc393192a4c",
-        measurementId: "G-J95XVPJPEZ",
-      };
 
-      // Initialize Firebase
-      const app = firebase.initializeApp(firebaseConfig);
-    </script>
-    <script src="/tradicionesbacan-project/js/Carrito.js"></script>
-  </body>
+
+
+   <script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+  integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+  integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+  crossorigin="anonymous"
+></script>
+
+
+<script src="../js/json/datos.js"></script>
+<script src="../js/json/datoslogic.js"></script>
+<script src="../js/validacionform/validacion.js"></script>
+</body>
 </html>
