@@ -11,7 +11,6 @@ function mostrarCarrito() {
         document.getElementById('Carrito').style.display = 'none';
     }
 }
-
 db.collection('Productos').get().then((snapshot) => {
     //tabla.innerHTML = '';
     snapshot.forEach((doc) => {
