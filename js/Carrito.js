@@ -19,7 +19,7 @@ db.collection('Productos').get().then((snapshot) => {
         tabla.innerHTML += `
         <div class="FotoCarrito">
             <img src="${doc.data().Imagen}" alt=""/>
-            <h5> ${doc.data().Nombre}<br>${doc.data().Precio}</h5>
+            <h5> ${doc.data().Nombre}<br>$ ${doc.data().Precio}</h5>
             <div class="Contador">
                 <form class="agregar"><input type="number" id="cantidad" name="cantidad" min="1" placeholder="Cantidad">
             </div>
