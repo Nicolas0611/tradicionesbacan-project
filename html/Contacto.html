@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/Navbar.css" />
+    <link rel="stylesheet" href="../css/validacion.css" />
+    <link rel="stylesheet" href="../css/Boton_whatsapp.css" />
 
     <!--Fuentes de texto-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,6 +26,16 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
       rel="stylesheet"
     />
+
+
+    <!--Boton de whatsapp-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <a href="https://api.whatsapp.com/send?phone=+573158503531" class="float" target="-blank">
+  <i class="fa fa-whatsapp my-float"></i>
+  </a>
+
+
+
 
     <title>Tienda Bacan</title>
   </head>
@@ -94,60 +106,69 @@
     </header>
    <body>
     <div class="img" >
-      <div class="container-formulario">
+      <form action="" class="container-formulario" id="formulario">
         <div class="subcontenedor-form">
           <div class="title-form">
             <h3>¿Tienes preguntas? llena este formulario</h3>
           </div>
           <div class="linea"></div>
-          <div class="rows-forms">
+          <!--nombre de usuario-->
+          <div class="rows-forms" id="grupo__txtnombre">
             <div class="container-P">
-              <p>Nombre* </p>
+              <p>Nombre </p>
             </div>
             <div class="container-imput">
-              <input type="text" id="txtnombre" required>
-              <div class="invalid-feedback">
-                Por favor ingrece los datos necesarios.
-              </div>
+              <input type="text" class="formulario_input" name="txtnombre" id="txtnombre" >
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
             </div>
+         
           </div>
+          <!--celular de usuario-->
           <div class="rows-forms">
             <div class="container-P">
               <p>Celular* </p>
             </div>
-            <div class="container-imput">
-              <input type="number" id= "txtcelular">
+            <div class="container-imput" id="grupo__txtcelular">
+              <input type="number" class="formulario_input" name="txtcelular" id="txtcelular" required>
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              <p class="formulario__input-error">ingresa un numero valido</p>
             </div>
           </div>
-          <div class="rows-forms">
+          <!--correo de usuario-->
+          <div class="rows-forms"id="grupo__txtcorreo">
             <div class="container-P">
               <p>Correo* </p>
             </div>
             <div class="container-imput">
-              <input type="email" id="txtcorreo">
+              <input type="email" class="formulario_input" name="txtcorreo" id="txtcorreo" required>
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
             </div>
           </div>
+          <!--asunto de usuario-->
           <div class="rows-forms">
             <div class="container-P">
               <p>Asunto* </p>
             </div>
             <div class="container-imput">
-              <input type="text" id="txtasunto">
+              <input type="text" id="txtasunto" required>
             </div>
           </div>
+          <!--descripcion de usuario-->
           <div class="rows-forms">
             <div class="container-P">
               <p>Descripción* </p>
             </div>
             <div class="container-Text-area">
-              <textarea class="form-control" id="txtdescripcion" rows="3"></textarea>
+              <textarea class="form-control" id="txtdescripcion" rows="3" required></textarea>
             </div>
           </div>
           <div class="contenedor-btn-enviar rows-forms">
-            <button type="button" class="btn btn-primary boton-enviar" id="btnSaveEnviar">Enviar</button>
+            <button type="submit" class="btn btn-primary boton-enviar" id="btnSaveEnviar">Enviar</button>
           </div>
         </div>
-      </div>
+      </form>
 
     </div>
     <footer class="text-white" style="background-color: #000f55">
@@ -242,5 +263,6 @@
 <script src="../js/json/datos.js"></script>
 <script src="../js/json/datoslogic.js"></script>
 <script src="../js/validacionform/validacion.js"></script>
+
 </body>
 </html>
