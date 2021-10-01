@@ -12,9 +12,6 @@ body{
     font-size: 60px;
     text-align: center;
 }
-#pro{
-    
-}
 h4{
     margin: 20px 0px 10px 0px;
     font-size: 24px;
@@ -35,7 +32,6 @@ h5{
     margin-bottom: 70px;
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .imgproduct{
@@ -68,4 +64,11 @@ h5{
 .material-icons{
     font-size: 30px;
     color: black;
+}
+@media screen and (max-width: 780px) {
+    #producto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

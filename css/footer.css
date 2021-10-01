@@ -1,3 +1,6 @@
+.row{
+    justify-content: center;
+}
 .Tfooter{
     font-size: 24px;
     padding: 40px 150px 0 0;
@@ -8,4 +11,16 @@
     font-size: 14px;
     text-align: left;
     padding-left: 21px ;
+}
+@media screen and (max-width: 1180px) {
+    .Tfooter{
+        padding: 40px 0 0 0;
+        text-align: center; 
+    }
+    .row{
+        text-align: center; 
+    }
+    #peque{
+        text-align: center;
+    }
 }
