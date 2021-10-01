@@ -1,91 +1,181 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Bootstrap css -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/Navbar.css" />
 
-    <title>Tienda Bacan</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg" style="background-color: #ffff">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-              <img
-                src="../images/logo_bacan.png"
-                alt=""
-                width="170"
-                height="80"
-                class="d-inline-block align-text-top"
-              />
-            </a>
-            <button
-              class="navbar-toggler navbar-light"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"> </span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-menu-link nav-link" href="../index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-menu-link nav-link"
-                    href="../html/Sobre_Nosotros.html"
-                    >Sobre Nosotros</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-menu-link nav-link" aria-current="page" href="../html/Tienda.html"
-                    ><b>Tienda</b></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-menu-link nav-link" href="#">Contacto</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-menu-link nav-link" href="#">
-                    <img
-                      src="../images/216477_shopping_cart_icon.png"
-                      alt=""
-                      width="40"
-                      height="auto"
-                    />
-                  </a>
-                </li>
-              </ul>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+  <!-- https://material.io/resources/icons/?style=baseline -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/tradicionesbacan-project/css/Navbar.css" />
+  <link rel="stylesheet" href="/tradicionesbacan-project/css/footer.css" />
+  <link rel="stylesheet" href="/tradicionesbacan-project/css/Tienda.css" />
+
+  <!--Fuentes de texto-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+
+  <title>Tienda Bacan</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg" style="background-color: #ffff">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img src="/tradicionesbacan-project/images/logo_bacan.png" alt="" width="170" height="80"
+              class="d-inline-block align-text-top" />
+          </a>
+          <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"> </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-menu-link nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-menu-link nav-link" href="/tradicionesbacan-project/html/Sobre_Nosotros.html">Sobre
+                  Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-menu-link nav-link" aria-current="page"
+                  href="/tradicionesbacan-project/html/Tienda.html"><b>Tienda</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-menu-link nav-link" href="/tradicionesbacan-project/html/Contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-menu-link nav-link" href="#">
+                  <img src="/tradicionesbacan-project/images/216477_shopping_cart_icon.png" alt="" width="40"
+                    height="auto" />
+                </a>
+              </li>
+            </ul>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <div class="titulo">
+      <h1>Tienda Bacan</h1>
+    </div>
+  </div>
+  <div id="pro">
+    <div class="container">
+      <div id="producto">
+        <div class="contenido">
+
+        </div>
       </div>
-    </header>
+    </div>
+  </div>
+  <footer class="text-white" style="background-color: #000f55">
+    <div class="container">
+      <div class="row">
+        <div class="col-4 text-reset align-items-center">
+          <p class="Tfooter"><b>Comunicate con Nosotros</b></p>
+          <hr color="white" size="6" width="100%" />
+        </div>
+        <div class="col-4 text-reset align-items-center">
+          <p class="Tfooter"><b>¿Donde encontrarnos?</b></p>
+          <hr color="white" size="6" width="100%" />
+        </div>
+        <div class="col-4 text-reset align-items-center">
+          <p class="Tfooter"><b>¡Siguenos en nuestras redes!</b></p>
+          <hr color="white" size="6" width="100%" />
+        </div>
+      </div>
+      <div class="row">
+        <ul class="col-4 list-unstyled">
+          <li>
+            <ion-icon name="phone-portrait-outline"></ion-icon>
+            (+57) (1) 757 1146
+          </li>
+          <li>
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            (+57) 315 8503 531
+          </li>
+          <li>
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            (+57) 310 6873 657
+          </li>
+          <li>
+            <ion-icon name="mail-outline"></ion-icon>
+            info@tradicionesbacan.com
+          </li>
+        </ul>
+        <ul class="col-4 list-unstyled">
+          <li>
+            <ion-icon name="location-outline"></ion-icon>
+            <b>Carrera 62 # 168a- 54</b>
+            <p id="peque">OFI 101 Int 6, Bogotá – Colombia</p>
+          </li>
+          <li>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15904.402551170488!2d-74.0598461!3d4.7525419!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8ef56ca55c40d930!2sTradiciones%20SAS!5e0!3m2!1ses!2sco!4v1631421226541!5m2!1ses!2sco"
+              width="300" height="250" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+          </li>
+        </ul>
+        <ul class="col-4 list-unstyled">
+          <li>
+            <ion-icon name="logo-instagram"></ion-icon>
+            @tradicionesbacan
+          </li>
+          <li>
+            <ion-icon name="logo-facebook"></ion-icon>
+            Tradiciones Bacan
+          </li>
+          <li>
+            <ion-icon name="logo-pinterest"></ion-icon>
+            Tradiciones Bacan
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
-    
+  <!-- scripts bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+  <!-- Iconos -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-      integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
-      integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <!-- FIREBASE SCRIPTS-->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDN-SSy6iHLQkDNMWlr3MmEIaMEdQXBr-E",
+      authDomain: "productos-bacan.firebaseapp.com",
+      projectId: "productos-bacan",
+      storageBucket: "productos-bacan.appspot.com",
+      messagingSenderId: "158266501029",
+      appId: "1:158266501029:web:cde1d0bf064bc393192a4c",
+      measurementId: "G-J95XVPJPEZ",
+    };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- CUSTOM CODE-->
+  <script src="/tradicionesbacan-project/js/Tienda.js"></script>
+</body>
+
 </html>
