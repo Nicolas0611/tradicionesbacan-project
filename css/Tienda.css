@@ -5,7 +5,9 @@
     
 }
 body{
-    *background-image: url(https://static.vecteezy.com/system/resources/previews/002/079/185/non_2x/seamless-pattern-of-chocolate-chip-cookies-repetitive-background-of-sweet-round-biscuits-with-brown-cream-on-top-vector.jpg);
+    background-color: white;
+    background-image: url(/tradicionesbacan-project/images/Fondo-tienda.png);
+    background-size: contain;
 }
 .titulo{
     padding: 150px 0 70px;
