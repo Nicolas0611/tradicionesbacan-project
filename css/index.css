@@ -107,21 +107,21 @@ h5{
     height: 1024px;
     display: flex;
     justify-content: space-between;
+    justify-items: center;
     flex-wrap: wrap;
     text-align: left;
     font-size: 18px;
 }
 #PreguntasFrecuentesT{
     width: 620px;
-    margin-left: 40px;
-    right: 10%;
     margin-top: 10%;
     margin-bottom: 10%;
+    margin-right: 5%;
     position: relative;
 }
 #Preguntasimg{
     position: relative;
-    width: 600px;
+    width: 800px;
     height: max-content;
     margin-top: 10%;
 }
@@ -132,27 +132,31 @@ h5{
 }
 #NuestrosClientesTitulo{
     position: relative;
-    top: 10%;
     text-align: center;
     color: #000F55;
+    margin-top: 10%;
+    margin-bottom: 80px;
 }
 .NuestrosClientesT{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     position: relative;
-    top: 20%;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     margin-left: 5%;
     margin-right: 5%;
 }
 .Cliente{
     width: 400px;
+    margin-left: 80px;
     color: #828282;
     position: relative;
     text-align: left;
 }
-
+.Clientes{
+    display: flex;
+    margin-bottom: 40px;
+}
 @media screen and (max-width: 1600px){
     #Portadaimg{
         position: absolute;
@@ -169,7 +173,7 @@ h5{
         color: #ffffff;
     }
     #Preguntasimg{
-        width: 40%;
+        width: 50%;
     }
     #ProductosDestacados{
         height: max-content;
@@ -232,7 +236,10 @@ h5{
     #Preguntasimg{
         position: relative;
         margin-top: 10%;
-        width: 500px;
+        width: 45%;
+    }
+    #NuestrosClientes{
+        height: max-content;
     }
 }
 @media screen and  (max-width: 1300px){
@@ -245,60 +252,27 @@ h5{
     #PreguntasFrecuentes{
         height: max-content;
     }
-    #PreguntasFrecuentesT{
-        width: 500px;
-        margin-bottom: 10%;
-        margin-top: 10%;
-        position: relative;
-    }
-    #Preguntasimg{
-        position: relative;
-        margin-top: 10%;
-        width: 450px;
-    }
-    #NuestrosClientes{
-        background-color: #ffffff;
-        height: 1400px;
-        font-size: 18px;
-    }
     #NuestrosClientesTitulo{
         position: relative;
-        top: 10%;
         text-align: center;
         color: #000F55;
     }
-    .NuestrosClientesT{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        position: relative;
-        top: 20%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
     .Cliente{
-        width: 20%;
+        width: 300px;
         color: #828282;
         position: relative;
         text-align: left;
     }
 }
-@media screen and (max-width: 1025px){
+@media screen and (max-width: 1100px){
     #Portadaimg{
         width: 400px;
     }
     #PreguntasFrecuentes{
         background-color: #F8F496;
         height: auto;
-        text-align: left;
-        font-size: 18px;
-    }
-    #PreguntasFrecuentesT{
-        right: 20px;
-    }
-    #Preguntasimg{
-        position: relative;
-        width: 400px;
+        align-items: center;
+        justify-content: center;
     }
     .ImgCliente{
         width: 120px;
@@ -308,11 +282,11 @@ h5{
         background-size: cover;
         background-repeat: repeat;
     }
+    #NuestrosClientesT{
+        align-items: center;
+        justify-content: center;
+    }
 }
-@media screen and (max-width: 940px){
-
-}
-
 @media screen and (max-width: 768px){
     #ReviveLaTradicion{
         height: 1100px;
@@ -339,6 +313,12 @@ h5{
         left: 100px;
     }
     #ReviveLaTradicion{
-        height: 1200px;
+        height: 1300px;
+    }
+    .Clientes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
     }
 }
