@@ -15,11 +15,11 @@
 .maps{
     text-align: center; 
 }
-a{
+.link_redes{
     color: white;
     text-decoration: none;
 }
-a:hover{
+.link_redes:hover{
     color: white;
 }
 @media screen and (max-width: 1180px) {
