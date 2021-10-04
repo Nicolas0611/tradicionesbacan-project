@@ -12,6 +12,16 @@
     text-align: left;
     padding-left: 21px ;
 }
+.maps{
+    text-align: center; 
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
 @media screen and (max-width: 1180px) {
     .Tfooter{
         padding: 40px 0 0 0;
