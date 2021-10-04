@@ -13,8 +13,8 @@ db.collection('Productos').get().then((snapshot) => {
             <img class="imgproduct" src="${doc.data().Imagen}" alt="">
             <h4>${doc.data().Nombre}</h4> 
             <h5>$${doc.data().Precio}</h5> 
-            <form class="agregar"><input type="number" id="cantidad" name="cantidad" min="1" placeholder="Cantidad">
-            <a type="submit"><span class="material-icons">add_shopping_cart</span></a></form>
+            <a class="agregar">Detalles</a>
+            <button class="boton_agregar">Agregar al carrito</button>
         </div>
         `
     })
