@@ -5,11 +5,11 @@
     
 }
 body{
-    *background-image: url(https://static.vecteezy.com/system/resources/previews/002/079/185/non_2x/seamless-pattern-of-chocolate-chip-cookies-repetitive-background-of-sweet-round-biscuits-with-brown-cream-on-top-vector.jpg);
+    background-image: url(/tradicionesbacan-project/images/Fondo-tienda.jpg);
 }
 .titulo{
     padding: 150px 0 70px;
-    font-size: 60px;
+    font-size: 64px;
     text-align: center;
 }
 #pro{

@@ -52,10 +52,32 @@
               <li class="nav-item">
                 <a class="nav-menu-link nav-link" href="/tradicionesbacan-project/html/Contacto.html">Contacto</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-menu-link nav-link" href="#">
+              <li class="sub-menu">
+                <a class="nav-menu-link nav-link" onclick="mostrarCarrito();" href="javascript:void(0);">
                   <img src="/tradicionesbacan-project/images/216477_shopping_cart_icon.png" alt="" width="40"
                     height="auto" />
+                  <div id="carritoFinal">
+                    <p class="vacio"> Carrito vacio</p>
+                    <table id="lista-carrito" class="u-full-width">
+                      <thead>
+                        <tr>
+                          <th>Imagen</th>
+                          <th>Producto</th>
+                          <th>Precio</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img src="/tradicionesbacan-project/images/Maleta_agueros.jpeg" width="100px">
+                          </td>
+                          <td>Prueba</td>
+                          <td><a href="#" class="borrar-producto">X</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <a href="#" id="vaciar-carrito" class="button u-full-wdth">Vaciar Carrito</a>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -72,9 +94,6 @@
   <div id="pro">
     <div class="container">
       <div id="producto">
-        <div class="contenido">
-
-        </div>
       </div>
     </div>
   </div>

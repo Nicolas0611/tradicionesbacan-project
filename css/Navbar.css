@@ -20,3 +20,29 @@ header{
     color: white;
     transition: 0.5s;
 }
+.borrar-producto{
+
+}
+.vacio{
+    padding: 10px;
+    background-color: gray;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+}
+.sub-menu #carritoFinal{
+    display: none;
+}
+.sub-menu:hover #carritoFinal{
+    display: block;
+    background-color: lightgray;
+    padding-bottom: 20px;
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    width: 510px;
+    height: 600px;
+    right: 1%;
+    z-index: 1;
+    overflow: hidden;
+    overflow-y: scroll;
+}
