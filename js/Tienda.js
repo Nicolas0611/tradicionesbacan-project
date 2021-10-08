@@ -3,8 +3,11 @@
 var db = firebase.firestore();
 
 var tabla = document.getElementById('producto')
-
-
+var titulomodal = document.querySelector('.modal-title')
+var modalcontenidoI = document.querySelector('.modal-bodyI')
+var modaldescripcion = document.querySelector('.descripcion')
+var precio = document.querySelector('.precio')
+var botonesdetalles = document.querySelector('.modal-footer')
 
 window.addEventListener('DOMContentLoaded', (e) =>{
     db.collection('Productos').get().then((snapshot) => {
@@ -16,7 +19,7 @@ window.addEventListener('DOMContentLoaded', (e) =>{
                 <img class="imgproduct" src="${doc.data().Imagen}" alt="">
                 <h4>${doc.data().Nombre}</h4> 
                 <h5>$${doc.data().Precio}</h5> 
-                <a class="detalles">Detalles</a>
+                <a class="detalles" data-id="${doc.id}" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</a>
                 <button class="boton_agregar" data-id="${doc.id}">Agregar al carrito</button>
             </div>
             `;
@@ -28,9 +31,15 @@ window.addEventListener('DOMContentLoaded', (e) =>{
                 })
             })
 
+            const btn_detalles = document.querySelectorAll('.detalles')
+                btn_detalles.forEach(btn =>{
+                    btn.addEventListener('click', (e)=>{
+                    console.log("detalles", e.target.dataset.id)
+                    escribirmodal(e.target.dataset.id);
+                })
+            })
+
         })
     });
+    
 })
-
-
-
