@@ -13,7 +13,7 @@ function escribirmodal(id_producto){
         `;
 
         precio.innerHTML=`
-            Precio: ${doc.data().Precio}
+            <b>Precio: ${doc.data().Precio}</b>
         `
         
         botonesdetalles.innerHTML=`

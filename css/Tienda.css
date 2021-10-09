@@ -3,9 +3,6 @@
     margin: 0px;
     padding: 0px;
 }
-body{
-    *background-image: url(https://static.vecteezy.com/system/resources/previews/002/079/185/non_2x/seamless-pattern-of-chocolate-chip-cookies-repetitive-background-of-sweet-round-biscuits-with-brown-cream-on-top-vector.jpg);
-}
 .titulo{
     padding: 150px 0 70px;
     font-size: 60px;
@@ -99,6 +96,7 @@ h5{
 }
 .precio{
     display:contents;
+    font-size: 25px;
 }
 .btn-secondary{
     margin-bottom: 15px;
