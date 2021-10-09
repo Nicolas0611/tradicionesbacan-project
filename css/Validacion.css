@@ -123,6 +123,7 @@ main {
 	font-size: 14px;
 	color: #119200;
 	display: none;
+	text-align: center;
 }
 
 .formulario__mensaje-exito-activo {
