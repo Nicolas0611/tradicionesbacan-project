@@ -10,7 +10,10 @@ nombre : pnombre,
 celular : pcelular,
 correo : pcorreo,
 asunto : pasunto,
-descripcion : pdescripcion
+descripcion : pdescripcion,
+
+fecha : firebase.firestore.FieldValue.serverTimestamp()
+
 };
 
 
