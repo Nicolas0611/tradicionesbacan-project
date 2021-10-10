@@ -5,13 +5,11 @@
     
 }
 body{
-    background-color: white;
-    background-image: url(/tradicionesbacan-project/images/Fondo-tienda.png);
-    background-size: contain;
+    background-image: url(/images/Fondo-tienda2.jpg);
 }
 .titulo{
     padding: 150px 0 70px;
-    font-size: 60px;
+    font-size: 64px;
     text-align: center;
 }
 #pro{

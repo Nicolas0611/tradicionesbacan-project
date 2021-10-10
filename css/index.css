@@ -68,9 +68,9 @@ h5{
 }
 #ProductosDestacados{
     height: 1024px;
-    background-image: url(/tradicionesbacan-project/images/Fondo_blando_puntos.png);
+    background-image: url(/images/Fondo_blando_puntos.png);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     text-align: center;
 }
 #ProductosDestacadosT1{
@@ -91,8 +91,9 @@ h5{
 .ProductoD{
     background-color: #F2F2F2;
     border-radius: 23px;
+    margin-left: 20px;
     width: 350px;
-    margin-bottom: 20px;
+    margin-top: 60px;
 }
 .ProductoT{
     width: 260px;
@@ -104,72 +105,57 @@ h5{
 #PreguntasFrecuentes{
     background-color: #F8F496;
     height: 1024px;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    flex-wrap: wrap;
     text-align: left;
     font-size: 18px;
 }
 #PreguntasFrecuentesT{
     width: 620px;
-    float: right;
-    top: 12%;
-    right: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: 5%;
     position: relative;
 }
 #Preguntasimg{
     position: relative;
-    top: 12%;
+    width: 800px;
+    height: max-content;
+    margin-top: 10%;
 }
 #NuestrosClientes{
     background-color: #ffffff;
     height: 1024px;
     font-size: 18px;
 }
-#NuestrosClientesT{
+#NuestrosClientesTitulo{
     position: relative;
-    top: 10%;
     text-align: center;
     color: #000F55;
+    margin-top: 10%;
+    margin-bottom: 80px;
 }
-#NuestrosClientesT1{
+.NuestrosClientesT{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     position: relative;
-    top: 20%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-bottom: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
-#Cliente1{
+.Cliente{
     width: 400px;
+    margin-left: 80px;
     color: #828282;
     position: relative;
     text-align: left;
 }
-#Cliente2{
-    width: 400px;
-    color: #828282;
-    position: relative;
-    text-align: left;
-}
-#NuestrosClientesT2{
+.Clientes{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    position: relative;
-    top: 30%;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-#Cliente3{
-    width: 400px;
-    color: #828282;
-    position: relative;
-    text-align: left;
-}
-#Cliente4{
-    width: 400px;
-    color: #828282;
-    position: relative;
-    text-align: left;
+    margin-bottom: 40px;
 }
 @media screen and (max-width: 1600px){
     #Portadaimg{
@@ -187,9 +173,13 @@ h5{
         color: #ffffff;
     }
     #Preguntasimg{
-        position: relative;
-        top: 12%;
-        width: 500px;
+        width: 50%;
+    }
+    #ProductosDestacados{
+        height: max-content;
+        background-repeat: repeat-y;
+        padding-top: 10%;
+        padding-bottom: 10%;
     }
 }
 @media screen and (max-width: 1500px){
@@ -200,11 +190,8 @@ h5{
         width: 500px;
     }
     #ProductosDestacados{
-        height: 1024px;
-        background-image: url(/tradicionesbacan-project/images/Fondo_blando_puntos.png);
+        height: auto;
         background-size: cover;
-        background-position: center;
-        text-align: center;
     }
     #ProductosDestacadosT1{
         position: relative;
@@ -236,110 +223,68 @@ h5{
     }
     #PreguntasFrecuentes{
         background-color: #F8F496;
-        height: 1150px;
+        height: auto;
         text-align: left;
         font-size: 18px;
     }
     #PreguntasFrecuentesT{
-        width: 40%;
-        float: right;
-        top: 12%;
-        right: 10%;
+        width: 500px;
+        margin-top: 10%;
+        margin-bottom: 10%;
         position: relative;
     }
     #Preguntasimg{
         position: relative;
-        top: 12%;
-        width: 500px;
+        margin-top: 10%;
+        width: 45%;
+    }
+    #NuestrosClientes{
+        height: max-content;
     }
 }
 @media screen and  (max-width: 1300px){
-    #PreguntasFrecuentesT{
-        width: 40%;
-        float: right;
-        top: 12%;
-        right: 10%;
-        position: relative;
+    #ProductosDestacados{
+        height: max-content;
+        background-repeat: repeat-y;
+        padding-top: 10%;
+        padding-bottom: 10%;
     }
-    #Preguntasimg{
-        position: relative;
-        top: 12%;
-        width: 450px;
+    #PreguntasFrecuentes{
+        height: max-content;
     }
-    #NuestrosClientes{
-        background-color: #ffffff;
-        height: 1400px;
-        font-size: 18px;
-    }
-    #NuestrosClientesT{
+    #NuestrosClientesTitulo{
         position: relative;
-        top: 10%;
         text-align: center;
         color: #000F55;
     }
-    #NuestrosClientesT1{
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        position: relative;
-        top: 20%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    #Cliente1{
-        width: 20%;
-        color: #828282;
-        position: relative;
-        text-align: left;
-    }
-    #Cliente2{
-        width: 20%;
-        color: #828282;
-        position: relative;
-        text-align: left;
-    }
-    #NuestrosClientesT2{
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        position: relative;
-        top: 30%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    #Cliente3{
-        width: 20%;
-        color: #828282;
-        position: relative;
-        text-align: left;
-    }
-    #Cliente4{
-        width: 20%;
+    .Cliente{
+        width: 300px;
         color: #828282;
         position: relative;
         text-align: left;
     }
 }
-@media screen and (max-width: 1025px){
+@media screen and (max-width: 1100px){
+    #Portadaimg{
+        width: 400px;
+    }
     #PreguntasFrecuentes{
         background-color: #F8F496;
-        height: 1300px;
-        text-align: left;
-        font-size: 18px;
-    }
-    #Preguntasimg{
-        position: relative;
-        top: 25%;
-        width: 350px;
+        height: auto;
+        align-items: center;
+        justify-content: center;
     }
     .ImgCliente{
         width: 120px;
         height: 120px;
     }
     #ProductosDestacados{
-        height: fit-content;
-        margin-top: 10%;
-        margin-bottom: 10%;
+        background-size: cover;
+        background-repeat: repeat;
+    }
+    #NuestrosClientesT{
+        align-items: center;
+        justify-content: center;
     }
 }
 @media screen and (max-width: 768px){
@@ -356,14 +301,24 @@ h5{
         left: 100px;
     }
     #ProductosDestacados{
-        height: fit-content;
-        margin-top: 10%;
-        margin-bottom: 10%;
+        height: auto;
     }
     .ProductoD{
-        background-color: #F2F2F2;
-        border-radius: 23px;
-        width: 250px;
         margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 700px) {
+    #ReviveLaTradicionT{
+        top: 500px;
+        left: 100px;
+    }
+    #ReviveLaTradicion{
+        height: 1300px;
+    }
+    .Clientes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
     }
 }

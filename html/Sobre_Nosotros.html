@@ -12,10 +12,9 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/tradicionesbacan-project/css/Sobre_Nosotros.css" />
-    <link rel="stylesheet" href="/tradicionesbacan-project/css/Navbar.css" />
-    <link rel="stylesheet" href="/tradicionesbacan-project/css/footer.css" />
-    <link rel="stylesheet" href="/tradicionesbacan-project/css/carrito.css"/>
+    <link rel="stylesheet" href="/css/Sobre_Nosotros.css" />
+    <link rel="stylesheet" href="/css/Navbar.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
 
     <!--Fuentes de texto-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -73,14 +72,32 @@
                 <li class="nav-item">
                   <a class="nav-menu-link nav-link" href="#">Contacto</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-menu-link nav-link" onclick="mostrarCarrito();" href="javascript:void(0);">
-                    <img
-                      src="../images/216477_shopping_cart_icon.png"
-                      alt=""
-                      width="40"
-                      height="auto"
-                    />
+                <li class="sub-menu">
+                  <a class="nav-menu-link nav-link"  href="javascript:void(0);">
+                    <img src="/tradicionesbacan-project/images/216477_shopping_cart_icon.png" alt="" width="40"
+                      height="auto" />
+                      <div id="Carrito">
+                        <h4>Carrito de compras</h4>
+                        <table id= "lista-carrito" class="u-full-width">
+                          <thead>
+                            <tr>
+                              <th>Imagen</th>
+                              <th>Producto</th>
+                              <th>Precio</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <img src="/tradicionesbacan-project/images/Maleta_agueros.jpeg" width="100px">
+                              </td>
+                              <td>Prueba</td>
+                              <td><a href="#" class="borrar-producto">X</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <a href="#" id= "vaciar-carrito" class="button u-full-wdth">Vaciar Carrito</a>
+                      </div>
                   </a>
                 </li>
               </ul>
@@ -89,9 +106,6 @@
         </nav>
       </div>
     </header>
-    <div id="Carrito">
-      <h4>Mi Carrito!</h4>
-    </div>
     <div id="Nempresa">
       <div id="NempresaT">
         <h1><b>Nuestra Empresa</b></h1>
@@ -122,8 +136,8 @@
       </div>
     </div>
     <div id="MisionMegaVision">
-      <div id="VisionCuadro">
-        <div id="Vision">
+      <div class="Cuadro">
+        <div class="VisionMision">
           <h2><b>Vision</b></h2>
           <p>
             Se busca revivir la costumbre colombiana de la quema del año viejo
@@ -134,8 +148,8 @@
           </p>
         </div>
       </div>
-      <div id="MisionCuadro">
-        <div id="Mision">
+      <div class="Cuadro">
+        <div class="VisionMision">
           <h2><b>Mision</b></h2>
           <p>
             Se busca revivir la costumbre colombiana de la quema del año viejo
