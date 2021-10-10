@@ -68,9 +68,9 @@ h5{
 }
 #ProductosDestacados{
     height: 1024px;
-    background-image: url(/tradicionesbacan-project/images/Fondo_blando_puntos.png);
+    background-image: url(/images/Fondo_blando_puntos.png);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     text-align: center;
 }
 #ProductosDestacadosT1{
@@ -88,119 +88,79 @@ h5{
     margin-right: 15%;
     top: 22%;
 }
-#Producto1{
+.ProductoD{
     background-color: #F2F2F2;
     border-radius: 23px;
+    margin-left: 20px;
     width: 350px;
-    margin-bottom: 20px;
+    margin-top: 60px;
 }
-#Producto2{
-    background-color: #F2F2F2;
-    border-radius: 23px;
-    width: 350px;
-    margin-bottom: 20px;
-}
-#Producto3{
-    background-color: #F2F2F2;
-    border-radius: 23px;
-    width: 350px;
-    margin-bottom: 20px;
-}
-#Producto1T{
+.ProductoT{
     width: 260px;
     margin: auto;
 }
-#Producto2T{
-    width: 260px;
-    margin: auto;
-}
-#Producto3T{
-    width: 260px;
-    margin: auto;
-}
-#Producto1img{
-    width: 350px;
-}
-#Producto2img{
-    width: 350px;
-}
-#Producto3img{
+.Productoimg{
     width: 350px;
 }
 #PreguntasFrecuentes{
     background-color: #F8F496;
     height: 1024px;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    flex-wrap: wrap;
     text-align: left;
     font-size: 18px;
 }
 #PreguntasFrecuentesT{
     width: 620px;
-    float: right;
-    top: 12%;
-    right: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: 5%;
     position: relative;
 }
 #Preguntasimg{
     position: relative;
-    top: 12%;
+    width: 800px;
+    height: max-content;
+    margin-top: 10%;
 }
 #NuestrosClientes{
     background-color: #ffffff;
     height: 1024px;
     font-size: 18px;
 }
-#NuestrosClientesT{
+#NuestrosClientesTitulo{
     position: relative;
-    top: 10%;
     text-align: center;
     color: #000F55;
+    margin-top: 10%;
+    margin-bottom: 80px;
 }
-#NuestrosClientesT1{
+.NuestrosClientesT{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     position: relative;
-    top: 20%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-bottom: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
-#Cliente1{
+.Cliente{
     width: 400px;
+    margin-left: 80px;
     color: #828282;
     position: relative;
     text-align: left;
 }
-#Cliente2{
-    width: 400px;
-    color: #828282;
-    position: relative;
-    text-align: left;
-}
-#NuestrosClientesT2{
+.Clientes{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    position: relative;
-    top: 30%;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-#Cliente3{
-    width: 400px;
-    color: #828282;
-    position: relative;
-    text-align: left;
-}
-#Cliente4{
-    width: 400px;
-    color: #828282;
-    position: relative;
-    text-align: left;
+    margin-bottom: 40px;
 }
 @media screen and (max-width: 1600px){
     #Portadaimg{
         position: absolute;
-        top: 14%;
+        top: 110px;
         right: 0%;
         width: 40%;
     }
@@ -213,24 +173,25 @@ h5{
         color: #ffffff;
     }
     #Preguntasimg{
-        position: relative;
-        top: 12%;
-        width: 500px;
+        width: 50%;
+    }
+    #ProductosDestacados{
+        height: max-content;
+        background-repeat: repeat-y;
+        padding-top: 10%;
+        padding-bottom: 10%;
     }
 }
 @media screen and (max-width: 1500px){
     #Portadaimg{
         position: absolute;
-        top: 14%;
+        top: 110px;
         right: 0%;
         width: 500px;
     }
     #ProductosDestacados{
-        height: 1024px;
-        background-image: url(/tradicionesbacan-project/images/Fondo_blando_puntos.png);
-        background-size: contain;
-        background-position: center;
-        text-align: center;
+        height: auto;
+        background-size: cover;
     }
     #ProductosDestacadosT1{
         position: relative;
@@ -247,160 +208,117 @@ h5{
         margin-right: 15%;
         top: 22%;
     }
-    #Producto1{
+    .ProductoD{
         background-color: #F2F2F2;
         border-radius: 23px;
-        width: 30%;
+        width: 300px;
         margin-bottom: 20px;
     }
-    #Producto2{
-        background-color: #F2F2F2;
-        border-radius: 23px;
-        width: 30%;
-        margin-bottom: 20px;
-    }
-    #Producto3{
-        background-color: #F2F2F2;
-        border-radius: 23px;
-        width: 30%;
-        margin-bottom: 20px;
-    }
-    #Producto1T{
+    .ProductoT{
         width: 80%;
         margin: auto;
     }
-    #Producto2T{
-        width: 80%;
-        margin: auto;
-    }
-    #Producto3T{
-        width: 80%;
-        margin: auto;
-    }
-    #Producto1img{
-        width: 100%;
-    }
-    #Producto2img{
-        width: 100%;
-    }
-    #Producto3img{
+    .Productoimg{
         width: 100%;
     }
     #PreguntasFrecuentes{
         background-color: #F8F496;
-        height: 1150px;
+        height: auto;
         text-align: left;
         font-size: 18px;
     }
     #PreguntasFrecuentesT{
-        width: 40%;
-        float: right;
-        top: 12%;
-        right: 10%;
+        width: 500px;
+        margin-top: 10%;
+        margin-bottom: 10%;
         position: relative;
     }
     #Preguntasimg{
         position: relative;
-        top: 12%;
-        width: 500px;
+        margin-top: 10%;
+        width: 45%;
+    }
+    #NuestrosClientes{
+        height: max-content;
     }
 }
 @media screen and  (max-width: 1300px){
-    #PreguntasFrecuentesT{
-        width: 40%;
-        float: right;
-        top: 12%;
-        right: 10%;
-        position: relative;
+    #ProductosDestacados{
+        height: max-content;
+        background-repeat: repeat-y;
+        padding-top: 10%;
+        padding-bottom: 10%;
     }
-    #Preguntasimg{
-        position: relative;
-        top: 12%;
-        width: 450px;
+    #PreguntasFrecuentes{
+        height: max-content;
     }
-    #NuestrosClientes{
-        background-color: #ffffff;
-        height: 1400px;
-        font-size: 18px;
-    }
-    #NuestrosClientesT{
+    #NuestrosClientesTitulo{
         position: relative;
-        top: 10%;
         text-align: center;
         color: #000F55;
     }
-    #NuestrosClientesT1{
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        position: relative;
-        top: 20%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    #Cliente1{
-        width: 20%;
-        color: #828282;
-        position: relative;
-        text-align: left;
-    }
-    #Cliente2{
-        width: 20%;
-        color: #828282;
-        position: relative;
-        text-align: left;
-    }
-    #NuestrosClientesT2{
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        position: relative;
-        top: 30%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    #Cliente3{
-        width: 20%;
-        color: #828282;
-        position: relative;
-        text-align: left;
-    }
-    #Cliente4{
-        width: 20%;
+    .Cliente{
+        width: 300px;
         color: #828282;
         position: relative;
         text-align: left;
     }
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1100px){
+    #Portadaimg{
+        width: 400px;
+    }
     #PreguntasFrecuentes{
         background-color: #F8F496;
-        height: 1300px;
-        text-align: left;
-        font-size: 18px;
+        height: auto;
+        align-items: center;
+        justify-content: center;
     }
-    #Preguntasimg{
-        position: relative;
-        top: 25%;
-        width: 350px;
-    }
-    #ImgCliente1{
+    .ImgCliente{
         width: 120px;
         height: 120px;
     }
-    #ImgCliente2{
-        width: 120px;
-        height: 120px;
+    #ProductosDestacados{
+        background-size: cover;
+        background-repeat: repeat;
     }
-    #ImgCliente3{
-        width: 120px;
-        height: 120px;
-    }
-    #ImgCliente4{
-        width: 120px;
-        height: 120px;
+    #NuestrosClientesT{
+        align-items: center;
+        justify-content: center;
     }
 }
-@media screen and (max-width: 425px){
-
+@media screen and (max-width: 768px){
+    #ReviveLaTradicion{
+        height: 1100px;
+        text-align: left;
+        background-color: #90B4F0; 
+    }
+    #Portadaimg{
+        width: 400px;
+    }
+    #ReviveLaTradicionT{
+        top: 400px;
+        left: 100px;
+    }
+    #ProductosDestacados{
+        height: auto;
+    }
+    .ProductoD{
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 700px) {
+    #ReviveLaTradicionT{
+        top: 500px;
+        left: 100px;
+    }
+    #ReviveLaTradicion{
+        height: 1300px;
+    }
+    .Clientes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
 }

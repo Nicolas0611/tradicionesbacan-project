@@ -28,6 +28,7 @@ window.addEventListener('DOMContentLoaded', (e) =>{
                 btn_agregar.forEach(btn =>{
                     btn.addEventListener('click', (e)=>{
                     console.log(e.target.dataset.id)
+                    btn_agregar_clicked(e);
                 })
             })
 
