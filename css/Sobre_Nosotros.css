@@ -56,35 +56,21 @@ body::-webkit-scrollbar-thumb{
     text-align: center;
     background-color: #F8F496;
 }
-#VisionCuadro{
+.Cuadro{
     position: relative;
     top: 25%;
     background-color: #ffffff;
-    height: 500px;
+    height: max-content;
     width: 485px;
     border-radius: 42px;
     box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
 }
-#MisionCuadro{
+.VisionMision{
     position: relative;
-    top: 25%;
-    background-color: #ffffff;
-    height: 500px;
-    width: 485px;
-    border-radius: 42px;
-    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
-}
-#Vision{
-    position: relative;
-    top: 10%;
     width: 400px;
     margin: auto;
-}
-#Mision{
-    position: relative;
-    top: 10%;
-    width: 400px;
-    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 #TienesPreguntas{
     background-color: #ffffff;
@@ -147,54 +133,6 @@ p{
         margin: auto;
         top: 35%;
     }
-    #VisionCuadro{
-        position: relative;
-        top: 25%;
-        background-color: #ffffff;
-        height: 500px;
-        width: 435px;
-        border-radius: 42px;
-        box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
-    }
-    #MisionCuadro{
-        position: relative;
-        top: 25%;
-        background-color: #ffffff;
-        height: 500px;
-        width: 435px;
-        border-radius: 42px;
-        box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
-    }
-    #Vision{
-        position: relative;
-        top: 10%;
-        width: 88%;
-        margin: auto;
-    }
-    #Mision{
-        position: relative;
-        top: 10%;
-        width: 88%;
-        margin: auto;
-    }
 }
 @media screen and (max-width: 900px){
-    #VisionCuadro{
-        position: relative;
-        top: 25%;
-        background-color: #ffffff;
-        height: 530px;
-        width: 390px;
-        border-radius: 42px;
-        box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
-    }
-    #MisionCuadro{
-        position: relative;
-        top: 25%;
-        background-color: #ffffff;
-        height: 530px;
-        width: 390px;
-        border-radius: 42px;
-        box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
-    }
 }
