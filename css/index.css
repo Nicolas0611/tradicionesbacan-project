@@ -160,7 +160,7 @@ h5{
 @media screen and (max-width: 1600px){
     #Portadaimg{
         position: absolute;
-        top: 14%;
+        top: 110px;
         right: 0%;
         width: 40%;
     }
@@ -185,7 +185,7 @@ h5{
 @media screen and (max-width: 1500px){
     #Portadaimg{
         position: absolute;
-        top: 14%;
+        top: 110px;
         right: 0%;
         width: 500px;
     }
