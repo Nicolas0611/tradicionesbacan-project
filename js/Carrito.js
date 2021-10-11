@@ -3,6 +3,16 @@ var Carrito = document.getElementById('Carrito');
 var tabla = document.getElementById('producto');
 
 const ContenedoresDeItems = document.querySelector('#Carrito2');
+
+function btn_agregar_detalles(event){
+    const button = event.target;
+    const item = button.closest('.modal-content');
+    const itemTitulo = item.querySelector('.modal-title').textContent;
+    const itemPrecio = item.querySelector('.precio').textContent;
+    const itemImagen = item.querySelector('.imgproductD').src;
+    addItemAlCarrito(itemTitulo, itemPrecio, itemImagen);
+} 
+
 function btn_agregar_clicked(event) {
     const button = event.target;
     const item = button.closest('.contenido');
