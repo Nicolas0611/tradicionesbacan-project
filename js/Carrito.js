@@ -2,18 +2,17 @@ var db = firebase.firestore();
 var Carrito = document.getElementById('Carrito');
 var tabla = document.getElementById('producto');
 
-db.collection('Productos').get().then((snapshot) => {
-    const btn_agregar = document.querySelectorAll('.boton_agregar')
-    btn_agregar.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            console.log(e.target.dataset.id)
-        })
-    })
-    btn_agregar.forEach(btn_agregar_carro => {
-        btn_agregar_carro.addEventListener('click', btn_agregar_clicked);
-    })
-});
 const ContenedoresDeItems = document.querySelector('#Carrito2');
+
+function btn_agregar_detalles(event){
+    const button = event.target;
+    const item = button.closest('.modal-content');
+    const itemTitulo = item.querySelector('.modal-title').textContent;
+    const itemPrecio = item.querySelector('.precio').textContent;
+    const itemImagen = item.querySelector('.imgproductD').src;
+    addItemAlCarrito(itemTitulo, itemPrecio, itemImagen);
+} 
+
 function btn_agregar_clicked(event) {
     const button = event.target;
     const item = button.closest('.contenido');
