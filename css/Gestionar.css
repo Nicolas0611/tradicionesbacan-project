@@ -1,3 +1,11 @@
+.container-card {
+    border-radius: 2rem;
+    width: 20rem;
+    overflow: hidden;
+    margin: auto;
+    display: inline-block;
+    box-shadow: 0px 0px 1px black;
+}
 *{
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
@@ -11,6 +19,101 @@ body{
     font-size: 64px;
     text-align: center;
 }
+
+.text-parrafo{
+    min-height: 18rem;
+    color: gray;
+}
+.btnEditar{
+    width: 100%;
+    background-color: #fb9510;
+    border-style: none;
+}
+.btnBorrar{
+    width: 100%;
+    background-color: #fb9510;
+    border-style: none;
+}
+.boton-enviar{
+    width: 100%;
+    background-color: #fb9510;
+    border-style: none;
+}
+#btnNuevo{
+    width: 100%;
+    background-color: #fb9510;
+    border-style: none;
+}
+.body-container{
+    background-color: #ececec;
+}
+.imgclass{
+    height: 8rem;
+    object-fit: cover;
+}
+.carrito{
+    position: relative ;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+.contenedor-op{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+}
+.contanedor-datos{
+    width: 90%;
+    height: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    background-color: #ffff;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+.datatable-carrito{
+
+width: 100%;
+}
+
+.contenedor-opciones{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+.card{
+    border-radius: 10px;
+    min-height: 100%;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-size:cover;
+    background-position: center center;
+}
+
+.card-activo{
+    border-radius: 10px;
+    min-height: 100%;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-size:cover;
+    background-position: center center;
+    border-color: aqua;
+}
+.card-sub{
+    font-size: 18px;
+    padding-top: 50px;
+}
+
+
 @media screen and (max-width: 1024px) {
 
 }

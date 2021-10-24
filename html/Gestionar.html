@@ -11,24 +11,19 @@
     <!-- https://material.io/resources/icons/?style=baseline -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
 
-    <link rel="stylesheet" href="../css/Navbar.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="/tradicionesbacan-project/css/Navbar.css" />
+    <link rel="stylesheet" href="/tradicionesbacan-project/css/footer.css" />
     <link rel="stylesheet" href="/tradicionesbacan-project/css/Gestionar.css" />
-    <link rel="stylesheet" href="../css/Boton_whatsapp.css" />
 
     <!--Fuentes de texto-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
 
-    <!--Boton de whatsapp-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <a href="https://api.whatsapp.com/send?phone=+573158503531" class="float" target="-blank">
-        <i class="fa fa-whatsapp my-float"></i>
-    </a>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
 
 
-    <title>Gestionar</title>
+    <title>Gestion Bacan</title>
 </head>
 
 <body>
@@ -75,8 +70,101 @@
             <h2>No ha iniciado sesion</h2>
         </div>
     </div>
+    <div class="contenedor-op" id="card-container">
+        <div class="contenedor-opciones">
+            <div class="card container-card" id="card-carrito">
+                <div class="img-container">
+                    <img src="../images/216477_shopping_cart_icon.png" class="carrito" alt="...">
+                </div>
+                <div class="card-sub">
+                    <h2>Cotizaciónes </h2>
+                    <h2>usuarios</h2>
+                </div>
+            </div>
+            <div class="card container-card" id="card-ajustes">
+                <div class="img-container">
+                    <img src="../images/190631_716fa96e25b9c94e99ae020dede582ea.png" class="carrito" alt="...">
+                </div>
+                <div class="card-sub">
+                    <h2>Ajustes de </h2>
+                    <h2>Productos</h2>
+                </div>
+            </div>
+            <div class="card container-card" id="card-consultas">
+                <div class="img-container">
+                    <img src="../images/phone_in_talk_icon_137309.png" class="carrito" alt="...">
+                </div>
+                <div class="card-sub">
+                    <h2>Consultas </h2>
+                    <h2>usuarios</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Contenido de las comiciones-->
+    <div class="contanedor-datos" id="detalleCarrito" style="display: none;">
+
+        <table id="table_id" class="display nowrap datatable-carrito" style="display: 200%;">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Usuario</th>
+                    <th>Id Kit</th>
+                    <th>Fecha</th>
+                    <th>Total</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 2</td>
 
 
+                </tr>
+
+
+            </tbody>
+        </table>
+        <div>
+            <button type="submit" class="btn btn-primary boton-enviar" id="btnvolver">Volver</button>
+        </div>
+    </div>
+
+    <!--Contenido de los ajustes-->
+    <div class="contanedor-datos" id="detalleajustes" style="display: none;">
+        
+        <table id="table_modi" class="display" style="width: 240%;">
+        </table>
+
+        </tbody>
+        </table>
+        <div>
+            <button id="btnNuevo" class="btn btn-info" data-toggle="tooltip" title="Nuevo Producto">
+                <ion-icon name="add-circle-outline" style="color: #ffff; font-size: 30px; margin-top: 3px"></ion-icon>
+            </button>
+                
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary boton-enviar" id="btnvolveraj">Volver</button>
+        </div>
+    </div>
+    <!--contenido de las consultas-->
+    <div class="contanedor-datos" id="detalleconsultas" style="display: none;">
+        <table id="table_con" class="display" style="width: 100%;"></table>
+        <div>
+            <button type="submit" class="btn btn-primary boton-enviar" id="btnvolverco">Volver</button>
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
     <!-- Modal Iniciar sesion -->
     <div class="modal fade" id="SigninModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -100,42 +188,76 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="modalAltaEdicion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-light">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <input id="id" type="hidden"> <!-- ID que vamos a recibir de firebase -->
+                        <div class="form-group">
+                            <label>Numero de kit (sin espacios)</label>
+                            <input id="Numerokit" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre del producto</label>
+                            <input id="NombreProducto" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Descripcion</label>
+                            <input id="DescripcionProducto" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Precio</label>
+                            <input id="Precio" type="number" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                            tabindex="2">Cancelar</button>
+                        <button type="submit" value="btnGuardar" class="btn btn-primary" translate="1" >Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    <!-- scripts bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
-    <!-- Iconos -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <!-- FIREBASE SCRIPTS-->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+        <!-- scripts bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+        <!-- Iconos -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyDN-SSy6iHLQkDNMWlr3MmEIaMEdQXBr-E",
-            authDomain: "productos-bacan.firebaseapp.com",
-            projectId: "productos-bacan",
-            storageBucket: "productos-bacan.appspot.com",
-            messagingSenderId: "158266501029",
-            appId: "1:158266501029:web:cde1d0bf064bc393192a4c",
-            measurementId: "G-J95XVPJPEZ",
-        };
+        <!-- FIREBASE SCRIPTS-->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
 
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-    </script>
+        
 
-    <script src="/tradicionesbacan-project/js/sesion.js"></script>
-    <script src="/tradicionesbacan-project/js/Gestion.js"></script>
 
+
+        <!-- CUSTOM CODE-->
+        <script src="/tradicionesbacan-project/js/config.js"></script>
+        <script src="/tradicionesbacan-project/js/sesion.js"></script>
+        <script src="/tradicionesbacan-project/js/Gestion.js"></script>
+        <script src="/tradicionesbacan-project/js/Admin.js"></script>
+        <script src="/tradicionesbacan-project/js/tabla-con.js"></script>
+        <script src="/tradicionesbacan-project/js/tabla-modi.js"></script>
+        <script src="/tradicionesbacan-project/js/validacionform/datatable.js"></script>
 </body>
 
 </html>

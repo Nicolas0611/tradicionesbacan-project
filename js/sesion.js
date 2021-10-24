@@ -20,7 +20,6 @@ firebase.auth().onAuthStateChanged(user => {
     if (user) {
         console.log('sesion iniciada')
         logincheck(user);
-        loginchec(user);
         obtenerifuser();
     } else {
         console.log('sesion cerrada')
