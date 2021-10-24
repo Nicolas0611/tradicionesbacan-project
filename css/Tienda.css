@@ -60,9 +60,10 @@ h5{
     justify-content: center;
     margin-bottom: 10px;
     padding: 5px;
+    cursor: pointer;
 }
 .boton_agregar{
-    background-color: #364cb9;
+    background-color: #90B4F0;
     margin-bottom: 15px;
     border-radius: 10px;
     padding: 7px 10px;

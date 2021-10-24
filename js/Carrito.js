@@ -34,25 +34,26 @@ function addItemAlCarrito(itemTitulo, itemPrecio, itemImagen) {
     }
     const FilaCarrito = document.createElement('div');
     const ContenidoCarrito = `
-    <table class= "lista-carrito" class="u-full-width">
+    <table class= "lista-carrito">
         <thead>
-        <tr>
-            <th>Imagen</th>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Cantidad</th>
-        </tr>
+            <tr>
+                <th>Imagen</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>X</th>
+            </tr>
         </thead>
         <tbody>
-        <tr class ="ItemCarrito">
-            <td>
-            <img src=${itemImagen} width="100px">
-            </td>
-            <td class="ItemTitulo">${itemTitulo}</td>
-            <td class="ItemPrecio">${itemPrecio}</td>
-            <td><input class="ItemCantidad" type="number" min= "1" max="100" value="1"></td>
-            <td><a href="javascript:void(0);" class="borrar-producto">X</a></td>
-        </tr>
+            <tr class ="ItemCarrito">
+                <td>
+                    <img src=${itemImagen} width="100px">
+                </td>
+                <td class="ItemTitulo">${itemTitulo}</td>
+                <td class="ItemPrecio">${itemPrecio}</td>
+                <td><input class="ItemCantidad" type="number" min= "1" max="100" value="1"></td>
+                <td><a href="javascript:void(0);" class="borrar-producto">X</a></td>
+            </tr>
         </tbody>
     </table>
     `;

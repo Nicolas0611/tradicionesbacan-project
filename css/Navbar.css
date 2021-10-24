@@ -14,6 +14,10 @@ header{
 .nav-item{
     padding: 0 60px ;
 }
+#Carrito:hover{
+    background-color: #ffffff;
+    color: black;
+}
 .nav-menu-link:hover{
     background-color: #5293F0;
     border-radius: 7px;
@@ -22,7 +26,6 @@ header{
 }
 .ItemCantidad{
     width: 40px;
-
 }
 .vacio{
     padding: 10px;
@@ -38,6 +41,9 @@ header{
 #Carrito h4{
     padding-top: 10px;
     padding-bottom: 10px;
+    color: black;;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
 }
 .sub-menu:hover #Carrito{
     display: block;
@@ -53,10 +59,23 @@ header{
     overflow-y: scroll;
 }
 
-#Carrito h4{
-    color: black;;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
+#Carrito2{
+    text-align: center;
+}
+
+.lista-carrito{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 16px;
+    min-width: 400px;
+}
+.lista-carrito thead tr{
+
+    text-align: left;
+}
+.lista-carrito th,
+.lista-carrito td{
+    padding: 12px 15px;
 }
 #Carrito::-webkit-scrollbar{
     width: 10px; 
@@ -64,3 +83,4 @@ header{
 #Carrito::-webkit-scrollbar-thumb{
     background-color: lightgray;
 }
+

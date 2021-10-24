@@ -39,10 +39,5 @@ function escribirmodal(id_producto){
                 </li>
             `
         }
-
-        
-        
-
-
     });
 }
