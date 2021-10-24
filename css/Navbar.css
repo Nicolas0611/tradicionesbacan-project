@@ -1,3 +1,6 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
 header{
     z-index: 1;
     position: fixed;
@@ -20,14 +23,13 @@ a.gestion{
 .nav-link{
     font-size: 18px;
     color:black;
-    font-family: 'Montserrat', sans-serif;
+    border-radius: 7px;
 }
 .nav-item{
     padding: 0 60px ;
 }
 .nav-menu-link:hover{
     background-color: #5293F0;
-    border-radius: 7px;
     color: white;
     transition: 0.5s;
 }
