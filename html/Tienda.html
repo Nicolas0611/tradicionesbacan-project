@@ -24,8 +24,8 @@
   <!--Boton de whatsapp-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <a href="https://api.whatsapp.com/send?phone=+573158503531" class="float" target="-blank">
- <i class="fa fa-whatsapp my-float"></i>
- </a>
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
 
 
   <title>Tienda Bacan</title>
@@ -34,6 +34,12 @@
 <body>
   <header class="header">
     <div class="container">
+      <div class="administar">
+        <a class="Nconexion">No hay conexion con la base de datos</a>
+        <a class="ingresar logged-out" data-bs-toggle="modal" data-bs-target="#SigninModal" style="display:none">Ingresar</a>
+        <a class="gestion logged-in" href="/tradicionesbacan-project/html/Gestionar.html" style="display:none">Gestionar</a>
+        <a class="salir logged-in" style="display:none">salir</a>
+      </div>
       <nav class="navbar navbar-expand-lg" style="background-color: #ffff">
         <div class="container-fluid">
           <a class="navbar-brand" href="/tradicionesbacan-project/index.html">
@@ -60,17 +66,17 @@
               <li class="nav-item">
                 <a class="nav-menu-link nav-link" href="/tradicionesbacan-project/html/Contacto.html">Contacto</a>
               </li>
-              <li class="sub-menu">
+              <li class="sub-menu nav-item">
                 <a class="nav-menu-link nav-link" href="javascript:void(0);">
                   <img src="/tradicionesbacan-project/images/216477_shopping_cart_icon.png" alt="" width="40"
                     height="auto" />
                   <div id="Carrito">
                     <h4>Carrito de compras</h4>
                     <div id="Carrito2">
-                      
+
                     </div>
                     <p class="total-carrito">Total: </p>
-                      <a href="#" id="vaciar-carrito" class="button u-full-wdth">Vaciar Carrito</a>
+                    <a href="#" id="vaciar-carrito" class="button u-full-wdth">Vaciar Carrito</a>
                   </div>
                 </a>
               </li>
@@ -93,35 +99,59 @@
     </div>
   </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title col-xl-6 col-md-8" id="exampleModalLabel">Modal title</h2>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-lg-7 modal-bodyI">
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title col-xl-6 col-md-8" id="exampleModalLabel">Modal title</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-7 modal-bodyI">
 
-          </div>
-          <div class="col-lg-5"><h5>Descripción</h5>
+            </div>
+            <div class="col-lg-5">
+              <h5>Descripción</h5>
               <ul class="descripcion">
 
               </ul>
               <div>
                 <h4 class="precio">Precio</h4>
               </div>
+            </div>
           </div>
-      </div>
-      </div>
-      <div class="modal-footer">
+        </div>
+        <div class="modal-footer">
 
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+  <!-- Modal Iniciar sesion -->
+  <div class="modal fade" id="SigninModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><a>Ingresar con tu cuenta Bacan</a></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form">
+            <div class="form-group">
+              <input type="email" id="loginemail" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="password" id="loginpassword" class="form-control" placeholder="Contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-block btn-ini">Iniciar sesion</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer class="text-white" style="background-color: #000f55">
     <div class="container">
@@ -169,15 +199,18 @@
           <ul class="list-unstyled">
             <li>
               <ion-icon name="logo-instagram"></ion-icon>
-              <a class="link_redes" href="https://www.instagram.com/tradicionesbacan/" target="_blank">@tradicionesbacan</a>
+              <a class="link_redes" href="https://www.instagram.com/tradicionesbacan/"
+                target="_blank">@tradicionesbacan</a>
             </li>
             <li>
               <ion-icon name="logo-facebook"></ion-icon>
-              <a class="link_redes" href="https://www.facebook.com/tradicionesbacan/" target="_blank">Tradiciones Bacan</a>
+              <a class="link_redes" href="https://www.facebook.com/tradicionesbacan/" target="_blank">Tradiciones
+                Bacan</a>
             </li>
             <li>
               <ion-icon name="logo-pinterest"></ion-icon>
-              <a class="link_redes" href="https://co.pinterest.com/abermudez8652/_created/" target="_blank">Tradiciones Bacan</a>
+              <a class="link_redes" href="https://co.pinterest.com/abermudez8652/_created/" target="_blank">Tradiciones
+                Bacan</a>
             </li>
           </ul>
         </div>
@@ -196,6 +229,7 @@
   <!-- FIREBASE SCRIPTS-->
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
 
@@ -220,6 +254,7 @@
   <script src="/tradicionesbacan-project/js/Detallesproducto.js"></script>
   <script src="/tradicionesbacan-project/js/Tienda.js"></script>
   <script src="/tradicionesbacan-project/js/Carrito.js"></script>
+  <script src="/tradicionesbacan-project/js/sesion.js"></script>
 </body>
 
 </html>

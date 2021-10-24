@@ -1,0 +1,25 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(/tradicionesbacan-project/images/Fondo-tienda2.jpg);
+}
+.Nuser{
+    padding: 170px 0 70px;
+    font-size: 64px;
+    text-align: center;
+}
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 780px) {
+
+}
+@media screen and (max-width: 425px) {
+
+}
+@media screen and (max-width: 375px) {
+
+}
