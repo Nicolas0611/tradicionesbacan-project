@@ -6,7 +6,7 @@ function escribirmodal(id_producto){
     precio.innerHTML='';
     db.collection("Productos").doc(id_producto).get().then((doc)=>{
         titulomodal.innerHTML=`
-        ${doc.id}: ${doc.data().Nombre}
+            ${doc.id}: ${doc.data().Nombre}
         `;
         modalcontenidoI.innerHTML=`
             <img class="imgproductD" src="${doc.data().Imagen}" alt="">
