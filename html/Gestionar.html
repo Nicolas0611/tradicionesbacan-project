@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <!-- https://material.io/resources/icons/?style=baseline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/tradicionesbacan-project/css/Navbar.css" />
+    <link rel="stylesheet" href="/tradicionesbacan-project/css/footer.css" />
+    <link rel="stylesheet" href="/tradicionesbacan-project/css/Gestionar.css" />
+
+    <!--Fuentes de texto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+
+
+    <title>Gestion Bacan</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="administar">
+                <a class="Nconexion">No hay conexion con la base de datos</a>
+                <a class="ingresar logged-out" data-bs-toggle="modal" data-bs-target="#SigninModal"
+                    style="display:none">Ingresar</a>
+                <a class="gestion logged-in" href="/tradicionesbacan-project/html/Gestionar.html"
+                    style="display:none">Gestionar</a>
+                <a class="salir logged-in" style="display:none">salir</a>
+            </div>
+            <nav class="navbar navbar-expand-lg" style="background-color: #ffff">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/tradicionesbacan-project/index.html">
+                        <img src="/tradicionesbacan-project/images/logo_bacan.png" alt="" width="170" height="80"
+                            class="d-inline-block align-text-top" />
+                    </a>
+                    <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"> </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-menu-link nav-link" aria-current="page" href="#"><b>Modificar productos</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-menu-link nav-link" href="#">Contactos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-menu-link nav-link" href="#">Pedidos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="Nuser">
+            <h2>No ha iniciado sesion</h2>
+        </div>
+    </div>
+    <div class="contenedor-op" id="card-container">
+        <div class="contenedor-opciones">
+            <div class="card container-card" id="card-carrito">
+                <div class="img-container">
+                    <img src="../images/216477_shopping_cart_icon.png" class="carrito" alt="...">
+                </div>
+                <div class="card-sub">
+                    <h2>Cotizaciónes </h2>
+                    <h2>usuarios</h2>
+                </div>
+            </div>
+            <div class="card container-card" id="card-ajustes">
+                <div class="img-container">
+                    <img src="../images/190631_716fa96e25b9c94e99ae020dede582ea.png" class="carrito" alt="...">
+                </div>
+                <div class="card-sub">
+                    <h2>Ajustes de </h2>
+                    <h2>Productos</h2>
+                </div>
+            </div>
+            <div class="card container-card" id="card-consultas">
+                <div class="img-container">
+                    <img src="../images/phone_in_talk_icon_137309.png" class="carrito" alt="...">
+                </div>
+                <div class="card-sub">
+                    <h2>Consultas </h2>
+                    <h2>usuarios</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Contenido de las comiciones-->
+    <div class="contanedor-datos" id="detalleCarrito" style="display: none;">
+
+        <table id="table_id" class="display nowrap datatable-carrito" style="display: 200%;">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Usuario</th>
+                    <th>Id Kit</th>
+                    <th>Fecha</th>
+                    <th>Total</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 2</td>
+
+
+                </tr>
+
+
+            </tbody>
+        </table>
+        <div>
+            <button type="submit" class="btn btn-primary boton-enviar" id="btnvolver">Volver</button>
+        </div>
+    </div>
+
+    <!--Contenido de los ajustes-->
+    <div class="contanedor-datos" id="detalleajustes" style="display: none;">
+        
+        <table id="table_modi" class="display" style="width: 240%;">
+        </table>
+
+        </tbody>
+        </table>
+        <div>
+            <button id="btnNuevo" class="btn btn-info" data-toggle="tooltip" title="Nuevo Producto">
+                <ion-icon name="add-circle-outline" style="color: #ffff; font-size: 30px; margin-top: 3px"></ion-icon>
+            </button>
+                
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary boton-enviar" id="btnvolveraj">Volver</button>
+        </div>
+    </div>
+    <!--contenido de las consultas-->
+    <div class="contanedor-datos" id="detalleconsultas" style="display: none;">
+        <table id="table_con" class="display" style="width: 100%;"></table>
+        <div>
+            <button type="submit" class="btn btn-primary boton-enviar" id="btnvolverco">Volver</button>
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <!-- Modal Iniciar sesion -->
+    <div class="modal fade" id="SigninModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><a>Ingresar con tu cuenta Bacan</a></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form">
+                        <div class="form-group">
+                            <input type="email" id="loginemail" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="loginpassword" class="form-control" placeholder="Contraseña"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-block btn-ini">Iniciar sesion</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalAltaEdicion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-light">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <input id="id" type="hidden"> <!-- ID que vamos a recibir de firebase -->
+                        <div class="form-group">
+                            <label>Numero de kit (sin espacios)</label>
+                            <input id="Numerokit" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre del producto</label>
+                            <input id="NombreProducto" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Descripcion</label>
+                            <input id="DescripcionProducto" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Precio</label>
+                            <input id="Precio" type="number" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                            tabindex="2">Cancelar</button>
+                        <button type="submit" value="btnGuardar" class="btn btn-primary" translate="1" >Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- scripts bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+        <!-- Iconos -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!-- FIREBASE SCRIPTS-->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+        
+
+
+
+        <!-- CUSTOM CODE-->
+        <script src="/tradicionesbacan-project/js/config.js"></script>
+        <script src="/tradicionesbacan-project/js/sesion.js"></script>
+        <script src="/tradicionesbacan-project/js/Gestion.js"></script>
+        <script src="/tradicionesbacan-project/js/Admin.js"></script>
+        <script src="/tradicionesbacan-project/js/tabla-con.js"></script>
+        <script src="/tradicionesbacan-project/js/tabla-modi.js"></script>
+        <script src="/tradicionesbacan-project/js/validacionform/datatable.js"></script>
+</body>
+
+</html>

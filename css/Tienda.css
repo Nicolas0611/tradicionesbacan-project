@@ -8,16 +8,16 @@ body{
     background-image: url(/tradicionesbacan-project/images/Fondo-tienda2.jpg);
 }
 .titulo{
-    padding: 150px 0 70px;
+    padding: 170px 0 70px;
     font-size: 64px;
     text-align: center;
 }
-h2{
+.modal-title{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-h4{
+.TituloP{
     margin: 20px 0px 10px 0px;
     font-size: 20px;
     height: 56px;
@@ -25,7 +25,7 @@ h4{
     justify-content: center;
     align-items: center;
 }
-h5{
+.Precio{
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -75,10 +75,6 @@ h5{
     height: 30px;
     margin-right: 30px;
     }
-.material-icons{
-    font-size: 30px;
-    color: black;
-}
 .modal-open .container-fluid,
 .modal-open .container {
     filter: blur(4px);
