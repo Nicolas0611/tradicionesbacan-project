@@ -108,9 +108,10 @@
             </table>
             <h2 class="Total">Total: $</h2>
             <form id="FormularioCotizacion">
-                <h3>Nombre: <input type="text" class="Nombre" placeholder="Nombre completo"></input></h3>
-                <h3>Telefono: <input type="tel" class="Telefono" placeholder="300 0000000"></input></h3>
-                <h3>E-mail: <input type="email" class="Email" placeholder="Ejemplo@ejemplo.com"></input></h3>
+                <h3>Nombre: <input type="text" class="Nombre" placeholder="Nombre" maxlength="50" required></input></h3>
+                <h3>Apellido: <input type="text" class="Apellido" placeholder="Apellido" maxlength="50" required></input></h3>
+                <h3>Telefono: <input type="tel" class="Telefono" placeholder="300 0000000" maxlength="10" required></input></h3>
+                <h3>E-mail: <input type="email" class="Email" placeholder="Ejemplo@ejemplo.com" required></input></h3>
                 <div id="Botones">
                     <button id="Enviar" type="submit">Enviar</button>
                     <button id="Cancelar" type="button">Cancelar</button>
@@ -212,4 +213,5 @@
         const app = firebase.initializeApp(firebaseConfig);
     </script>
     <script src="/tradicionesbacan-project/js/Carrito.js"></script>
+    <script src="/tradicionesbacan-project/js/Cotizacion.js"></script>
 </body>

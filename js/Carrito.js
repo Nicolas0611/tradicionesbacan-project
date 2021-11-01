@@ -16,13 +16,12 @@ function btn_agregar_detalles(event){
 function btn_agregar_clicked(event) {
     const button = event.target;
     const item = button.closest('.contenido');
-    const itemTitulo = item.querySelector('.contenido h4').textContent;
-    const itemPrecio = item.querySelector('.contenido h5').textContent;
-    const itemImagen = item.querySelector('.contenido img').src;
+    const itemTitulo = item.querySelector('.TituloP').textContent;
+    const itemPrecio = item.querySelector('.Precio').textContent;
+    const itemImagen = item.querySelector('.imgproduct').src;
     addItemAlCarrito(itemTitulo, itemPrecio, itemImagen);
 }
 function addItemAlCarrito(itemTitulo, itemPrecio, itemImagen) {
-
     const elementsTitle = ContenedoresDeItems.getElementsByClassName('ItemTitulo')
     for (let i = 0; i < elementsTitle.length; i++) {
         if (elementsTitle[i].innerText === itemTitulo) {

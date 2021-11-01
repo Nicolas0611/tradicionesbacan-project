@@ -8,16 +8,21 @@ body{
     background-size: contain;
 }
 h1{
-    font-size: 60px;
-}
-h2{
     font-size: 52px;
 }
+h2{
+    font-size: 40px;
+}
+h3{
+    width: 200px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 th{
-    font-size: 32px;
+    font-size: 28px;
 }
 td{
-    font-size: 28px;
+    font-size: 24px;
 }
 section {
     height: 1024px;
@@ -27,7 +32,7 @@ section {
 }
 .Cotizacion{
     background-color: white;
-    width: 900px;
+    width: 700px;
     padding: 40px;
     position: relative;
     display: flex;
@@ -59,16 +64,17 @@ section {
 }
 #Botones{
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
 }
 #Enviar{
     background-color: #90B4F0;
-    border-radius: 3px;
+    border-radius: 5px;
     border-style: none;
     padding: 10px 10px;
 }
 #Cancelar{
     border-style: none;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 10px 10px;
+    margin-left: 20px;
 }
