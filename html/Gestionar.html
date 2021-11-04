@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/tradicionesbacan-project/css/footer.css" />
     <link rel="stylesheet" href="/tradicionesbacan-project/css/Tienda.css" />
     <link rel="stylesheet" href="/tradicionesbacan-project/css/Gestionar.css" />
+    <link rel="stylesheet" href="/tradicionesbacan-project/css/configuracion.css" />
 
     <!--Fuentes de texto-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -147,7 +148,7 @@
         </table>
         <div>
             <button id="btnNuevo" class="btn btn-info" data-toggle="tooltip" title="Nuevo Producto">
-                <ion-icon name="add-circle-outline" style="color: #ffff; font-size: 30px; margin-top: 3px"></ion-icon>
+                <ion-icon name="add-circle-outline" style="color: #ffff; font-size: 20px; margin-top: 2px"></ion-icon>
             </button>
                 
         </div>
@@ -193,36 +194,79 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-primary text-light">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar producto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="contenedor-confi">
+                    <form class="subcontenedor-confi">
+                        
+                        <div class="subcontenedor-izq">
+                            
+                            <div>
+                                <div>
+                                    imagen del producto
+                                </div>
+                                <div class="contenedor-btn-enviar rows-forms">
+                                    <img src="https://via.placeholder.com/200" alt="" id="idimagen" class="previmagen">
+                                    
+                                </div>
+                                <div class = "archivos">
+                                    <input type="file" id="btnimagen" accept="image/*" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-descripcion">
+                            <!--ID-->
+                            <div class="rows-forms" id="grupo__txtnombre">
+                                <div class="container-P">
+                                    <p>ID</p>
+                                </div>
+                                <div class="container-imput">
+                                    <input type="text" class="formulario_input" name="txtnombre" id="txtnombre" required>
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            
+                                </div>
+            
+                            </div>
+                            <!--Nombre del producto-->
+                            <div class="rows-forms">
+                                <div class="container-P">
+                                    <p>Nombre del producto </p>
+                                </div>
+                                <div class="container-imput">
+                                    <input type="text" id="txtasunto" required>
+                                </div>
+                            </div>
+                            <!--Descripcion-->
+                            <div class="rows-forms">
+                                <div class="container-P">
+                                    <p>Descripción</p>
+                                </div>
+                                <div class="container-Text-area">
+                                    <textarea class="form-control" id="txtdescripcion" rows="3" required></textarea>
+                                </div>
+                            </div>
+                            <!--Precio-->
+                            <div class="rows-forms">
+                                <div class="container-P">
+                                    <p>Precio </p>
+                                </div>
+                                <div class="container-imput" id="grupo__txtcelular">
+                                    <input type="number" class="formulario_input" name="txtcelular" id="txtcelular" required>
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                            </div>
+                            <div class="botones">
+                                <div class="contenedor-btn-enviar rows-forms">
+                                    <button type="submit" class="btn btn-primary boton-azul" id="btnguardar">Guardar</button>
+                                </div>
+                                <div class="contenedor-btn-enviar rows-forms">
+                                    <button type="button" class="btn btn-primary boton-gris">Cancelar</button>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Actualizacion exitosa</p>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <form>
-                    <div class="modal-body">
-                        <input id="id" type="hidden"> <!-- ID que vamos a recibir de firebase -->
-                        <div class="form-group">
-                            <label>Numero de kit (sin espacios)</label>
-                            <input id="Numerokit" type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Nombre del producto</label>
-                            <input id="NombreProducto" type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Descripcion</label>
-                            <input id="DescripcionProducto" type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Precio</label>
-                            <input id="Precio" type="number" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                            tabindex="2">Cancelar</button>
-                        <button type="submit" value="btnGuardar" class="btn btn-primary" translate="1" >Guardar</button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
@@ -253,15 +297,15 @@
 
         <!-- CUSTOM CODE-->
         <script src="/tradicionesbacan-project/js/config.js"></script>
+        <script src="/tradicionesbacan-project/js/agregar producto.js"></script>
         <script src="/tradicionesbacan-project/js/sesion.js"></script>
         <script src="/tradicionesbacan-project/js/Detallesproducto.js"></script>
-        <script src="/tradicionesbacan-project/js/Tienda.js"></script>
-        <script src="/tradicionesbacan-project/js/Carrito.js"></script>
+
         <script src="/tradicionesbacan-project/js/Admin.js"></script>
         <script src="/tradicionesbacan-project/js/tabla-con.js"></script>
         <script src="/tradicionesbacan-project/js/tabla-modi.js"></script>
         <script src="/tradicionesbacan-project/js/validacionform/datatable.js"></script>
-        <script src="/tradicionesbacan-project/js/adminFirebase.js"></script>
+
 </body>
 
 </html>

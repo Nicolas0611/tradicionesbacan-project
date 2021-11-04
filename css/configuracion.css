@@ -1,0 +1,94 @@
+.contenedor-confi {
+  padding-top: 158px;
+
+  width: 90%;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  justify-content: center;
+}
+.subcontenedor-confi {
+  background-color: #fff;
+  box-shadow: 0px 0px 2px black;
+  display: flex;
+  padding-top: 25px;
+  padding-left: 25px;
+  border-radius: 20px;
+}
+.previmagen {
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    max-height: 600px;
+    margin: 10px;
+}
+
+#btnimagen {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  max-height: 500px;
+}
+
+.subcontenedor-izq {
+  width: 80%;
+  display: flex;
+}
+
+.form-descripcion {
+  width: 100%;
+}
+.rows-forms {
+  display: flex;
+
+}
+.container-imput {
+  width: 50%;
+  
+  margin-top: 10px;
+}
+.container-Text-area {
+  width: 60%;
+  
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.container-P {
+  width: 30%;
+  text-align: right;
+  
+  margin-top: 10px;
+}
+
+.botones {
+  display: flex;
+  padding-left: 50%;
+  gap: 100px;
+  margin: auto;
+}
+
+.boton-azul {
+  height: 100%;
+  border-radius: 2rem;
+}
+
+.boton-gris {
+  height: 100%;
+  border-radius: 2rem;
+  background: gray;
+  border-color: gray;
+}
+
+input {
+    width: 120%;
+  margin-left: 10px;
+}
+
+.form-control {
+  height: 500px;
+}
+
+#formulario__mensaje-exito{
+    color: #119200;
+
+}
