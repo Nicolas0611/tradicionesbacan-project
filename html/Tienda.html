@@ -34,8 +34,10 @@
     <div class="container">
       <div class="administar">
         <a class="Nconexion">No hay conexion con la base de datos</a>
-        <a class="ingresar logged-out" data-bs-toggle="modal" data-bs-target="#SigninModal" style="display:none">Ingresar</a>
-        <a class="gestion logged-in" href="/tradicionesbacan-project/html/Gestionar.html" style="display:none">Gestionar</a>
+        <a class="ingresar logged-out" data-bs-toggle="modal" data-bs-target="#SigninModal"
+          style="display:none">Ingresar</a>
+        <a class="gestion logged-in" href="/tradicionesbacan-project/html/Gestionar.html"
+          style="display:none">Gestionar</a>
         <a class="salir logged-in" style="display:none">salir</a>
       </div>
       <nav class="navbar navbar-expand-lg" style="background-color: #ffff">
@@ -102,7 +104,8 @@
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title col-xl-6 col-md-8" id="exampleModalLabel">Modal title</h2>
+          <h2 class="modal-title col-xl-3 col-md-6" id="exampleModalLabel">Modal title</h2>
+          <h2 class="modal-title2 col-xl-6 col-md-6" id="exampleModalLabel2">Modal title</h2>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -116,6 +119,7 @@
 
               </ul>
               <div>
+                <h4><b>Precio:</b></h4>
                 <h4 class="precio">Precio</h4>
               </div>
             </div>
@@ -230,7 +234,6 @@
   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
-
   <script>
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -243,11 +246,9 @@
       appId: "1:158266501029:web:cde1d0bf064bc393192a4c",
       measurementId: "G-J95XVPJPEZ",
     };
-
     // Initialize Firebase
     const app = firebase.initializeApp(firebaseConfig);
   </script>
-
   <!-- CUSTOM CODE-->
   <script src="/tradicionesbacan-project/js/Detallesproducto.js"></script>
   <script src="/tradicionesbacan-project/js/Tienda.js"></script>
