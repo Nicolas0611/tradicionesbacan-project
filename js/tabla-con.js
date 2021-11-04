@@ -11,10 +11,7 @@ $(document).ready(function () {
             var horaFormateada = `${hora.getHours()}:${hora.getMinutes()}:${hora.getSeconds()}`;
             var mensaje=fechaFormateada+" "+horaFormateada;
             dataSet.push([doc.id, doc.data().nombre, doc.data().celular, doc.data().correo, doc.data().asunto, doc.data().descripcion, mensaje])
-        
-      
             x++
-        
         });
         $('#table_con').dataTable({
             destroy: true,
@@ -22,9 +19,9 @@ $(document).ready(function () {
             "data":dataSet,
             "columnDefs": [
                 { "width": "80px", "targets": 0 }
-              ],
+            ],
             columns: [
-               /* {
+                /* {
                     targets: [0], 
                     visible: false, //ocultamos la columna de ID que es la [0]                        
                 },*/
@@ -37,12 +34,7 @@ $(document).ready(function () {
                 { title: "fecha" }
             ]
         });
-
     }
-
     )
-
-
- 
 });
 

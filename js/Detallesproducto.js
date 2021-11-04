@@ -18,15 +18,16 @@ function escribirmodal(id_producto) {
 
         botonesdetalles.innerHTML = `
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="boton_agregar btn btn-primary" data-id="${doc.id}" data-bs-dismiss="modal">Agregar al carrito</button>
+            <button class="boton_agregar" data-id="${doc.id}" data-bs-dismiss="modal">Agregar al carrito</button>
         `
 
         const btn_agregar = document.querySelectorAll('.boton_agregar')
-        btn_agregar.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                console.log(e.target.dataset.id)
-            })
+        btn_agregar.forEach(btn =>{
+            btn.addEventListener('click', (e)=>{
+            console.log(e.target.dataset.id)
+            btn_agregar_detalles(e);
         })
+    })
 
         console.log(doc.data().Descripcion.length)
 

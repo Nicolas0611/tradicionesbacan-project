@@ -8,10 +8,8 @@ $(document).ready(function () {
 
     db.collection("Productos").get().then((querySnapshot) => {
         querySnapshot.forEach(function (doc) {
-
             dataSet.push([doc.id, doc.data().Nombre, doc.data().Precio])
             x++
-
         });
         $('#table_modi').dataTable({
             destroy: true,
@@ -20,12 +18,11 @@ $(document).ready(function () {
             "columnDefs": [
                 { "width": "80px", "targets": 0 }
             ],
-
             columns: [
                 /* {
-                     targets: [0], 
+                    targets: [0], 
                      visible: false, //ocultamos la columna de ID que es la [0]                        
-                 },*/
+                },*/
                 { title: "id" },
                 { title: "Nombre" },
                 { title: "Precio" },
@@ -35,7 +32,6 @@ $(document).ready(function () {
                     defaultContent: "<div class='wrapper text-center'><div class='btn-group'><button class='btnEditar btn btn-primary' data-toggle='tooltip' title='Editar'>" + iconoEditar + "</button><button class='btnBorrar btn btn-danger' data-toggle='tooltip' title='Borrar'>" + iconoBorrar + "</button></div></div>"
                 }
             ]
-
         });
 
         $('#btnNuevo').click(function () {
@@ -47,29 +43,26 @@ $(document).ready(function () {
             $('#modalAltaEdicion').modal('show');
         });
 
-        $('form').submit(function(e){                         
+        $('form').submit(function (e) {
             e.preventDefault();
-            let Numerokit = $.trim($('#Numerokit').val());   
-            let DescripcionProductoArray = $.trim($('#DescripcionProducto').val());          
+            let Numerokit = $.trim($('#Numerokit').val());
+            let DescripcionProductoArray = $.trim($('#DescripcionProducto').val());
             let Nombre = $.trim($('#NombreProducto').val());
-            let Precio = $.trim($('#Precio').val());                                
+            let Precio = $.trim($('#Precio').val());
             let Descripcion = DescripcionProductoArray.split(".");
-            let Imagen = "";        
-            data = { Descripcion:Descripcion,Imagen:Imagen, Nombre:Nombre,Precio:Precio};             
+            let Imagen = "";
+            data = { Descripcion: Descripcion, Imagen: Imagen, Nombre: Nombre, Precio: Precio };
             db.collection("Productos").doc(Numerokit).set(data)
-            .then(function () {
-                console.log("Document successfully written!");
-            })
-            .catch(function (error) {
-                console.error("Error writing document: ", error);
-            });
+                .then(function () {
+                    console.log("Document successfully written!");
+                })
+                .catch(function (error) {
+                    console.error("Error writing document: ", error);
+                });
             $("form").trigger("reset");
             $('#modalAltaEdicion').modal('hide');
         });
-    
     }
-
     )
-
 });
 
