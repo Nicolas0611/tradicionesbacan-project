@@ -1,6 +1,119 @@
-.contenedor-confi {
-  padding-top: 158px;
+*{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-image: url(/tradicionesbacan-project/images/FondoAdmin.jpg);
+}
+.Nuser{
+  padding: 170px 0 50px;
+  font-size: 64px;
+  text-align: center;
+}
+.TTA{
+  background-color: #fff;
+  padding: 0px 0px 10px 0px;
+}
 
+.cabeza-tabla{
+  margin: 20px;
+  display: flex;
+  gap:25px;
+  align-items: center;
+}
+
+.tabla-prod{
+  margin: auto;
+}
+
+
+
+.buscar-control{
+  width: 200px;
+  height: 30px;
+  margin-left: auto;
+}
+
+#Ttabla{
+padding-left: 50px;
+padding-right: 50px;
+text-align: center;
+font-size: 18px;
+}
+
+#idT{
+  padding: 0px 50px 0px 50px;
+}
+
+#nombreT{
+ padding: 0px 250px 0px 250px;
+}
+
+#precioT{
+padding: 0px 50px 0px 50px;
+}
+
+#accionesT{
+  padding: 0px 50px 0px 50px;
+}
+
+#accionT{
+  display: flex;
+  justify-content: center;
+  padding-top: 3px;
+}
+
+.btnEditar{
+  width: 20%;
+  text-align: right;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #0d6efd;
+  color: whitesmoke;
+  border-style: none;
+  justify-content: flex-end;
+}
+
+.btnEditar:hover{
+  background-color: #90B4F0;
+}
+
+.btnBorrar{
+  width: 20%;
+  text-align: left;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #0d6efd;
+  color: white;
+  border-style: none;
+}
+
+.btnBorrar:hover{
+  background-color: crimson;
+}
+.boton-enviar{
+  width: 100%;
+  background-color: #0d6efd;
+  border-style: none;
+}
+#btnNuevo{
+  width: 100%;
+  background-color: #0a8328;
+  border-style: none;
+}
+
+#btnNuevo:hover{
+  background-color:rgb(5, 46, 5);
+}
+
+#datosTabla{
+  text-align:center;
+}
+
+.contenedor-confi {
+  padding-top: 15px;
+  padding-bottom: 15px;
   width: 90%;
   display: flex;
   flex-flow: column;
@@ -9,16 +122,13 @@
 }
 .subcontenedor-confi {
   background-color: #fff;
-  box-shadow: 0px 0px 2px black;
   display: flex;
   padding-top: 25px;
-  padding-left: 25px;
-  border-radius: 20px;
+  
 }
 .previmagen {
-    width: auto;
-    height: auto;
-    max-width: 500px;
+    
+    max-width: 400px;
     max-height: 600px;
     margin: 10px;
 }
@@ -44,7 +154,6 @@
 }
 .container-imput {
   width: 50%;
-  
   margin-top: 10px;
 }
 .container-Text-area {
@@ -62,7 +171,7 @@
 
 .botones {
   display: flex;
-  padding-left: 50%;
+  padding-left: 20%;
   gap: 100px;
   margin: auto;
 }

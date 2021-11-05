@@ -9,12 +9,14 @@ const loginchec = user =>{
         Nusuario.innerHTML += `
             <h2>Hola ${user.email}</h2>
         `;
+        $('#card-container').show();
     }
     else{
     Nusuario.innerHTML = '';
     Nusuario.innerHTML += `
         <h1>No ha iniciado sesion</h1>
     `;
+    $('#card-container').hide();
     }
 }
 
