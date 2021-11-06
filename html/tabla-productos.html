@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
 
     <link rel="stylesheet" href="/tradicionesbacan-project/css/NavbarG.css" />
-    <link rel="stylesheet" href="/tradicionesbacan-project/css/configuracion.css" />
+    <link rel="stylesheet" href="/tradicionesbacan-project/css/TablaProd.css" />
 
     <!--Fuentes de texto-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
 
 
-    <title>Gestion Bacan</title>
+    <title>Gestion productos Bacan</title>
 </head>
 
 <body>
@@ -77,7 +77,7 @@
 
 
     <!--Contenido de los ajustes-->
-<div class="TTA">
+<div class="TTA" hidden>
     <div class="cabeza-tabla">
         <input class="buscar-control" type="text" name="Codigo" id="Codigo" placeholder="Busqueda">
         <div>
@@ -147,7 +147,7 @@
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content" id="modalag">
                 <div class="contenedor-confi">
-                    <form class="subcontenedor-confi">
+                    <form class="ModiProductos">
 
                         <div class="subcontenedor-izq">
 
@@ -173,9 +173,7 @@
                                     <input type="text" class="formulario_input"  id="iDmodal"
                                         required>
                                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
-
                                 </div>
-
                             </div>
                             <!--Nombre del producto-->
                             <div class="rows-forms">
@@ -192,7 +190,7 @@
                                     <p>Descripción</p>
                                 </div>
                                 <div class="container-Text-area">
-                                    <textarea class="form-control" id="desmodañ" rows="3" required></textarea>
+                                    <textarea class="form-control1" id="desmodal" placeholder="Los saltos de linea son una nueva descripcion" rows="3" required></textarea>
                                 </div>
                             </div>
                             <!--Precio-->
@@ -217,7 +215,7 @@
                                 </div>
                             </div>
                             <div>
-                                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Actualizacion
+                                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito" hidden>Actualizacion
                                     exitosa</p>
                             </div>
                         </div>
@@ -252,6 +250,7 @@
     <script src="/tradicionesbacan-project/js/config.js"></script>
     <script src="/tradicionesbacan-project/js/sesion.js"></script>
     <script src="/tradicionesbacan-project/js/tabla-modi.js"></script>
+    <script src="/tradicionesbacan-project/js/ModiProductos.js"></script>
     <script src="/tradicionesbacan-project/js/agregar producto.js"></script>
 </body>
 

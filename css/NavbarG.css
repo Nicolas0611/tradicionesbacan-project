@@ -33,6 +33,13 @@ a.gestion{
     color: white;
     transition: 0.5s;
 }
+.form-group{
+    padding-bottom: 20px;
+}
+.btn-ini{
+    background-color: #364cb9;
+    color: white;
+}
 @media screen and (max-width: 780px) {
     .administar{
         padding-right: 12px;
