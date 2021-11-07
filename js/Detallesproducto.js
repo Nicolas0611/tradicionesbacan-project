@@ -29,7 +29,7 @@ function escribirmodal(id_producto) {
         btn_agregar.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 console.log(e.target.dataset.id)
-                btn_agregar_detalles(e);
+                btn_agregar_detalles(e,e.target.dataset.id);
             })
         })
 
