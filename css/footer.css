@@ -7,6 +7,18 @@
     text-align: left; 
     align-items: left;
 }
+footer{
+    bottom: 0px;
+}
+.administar{
+    text-align:left;
+    padding-right: 100px;
+}
+
+.administar a{
+    color: white;
+    cursor: pointer;
+}
 #peque{
     font-size: 14px;
     text-align: left;
@@ -26,6 +38,10 @@
     .Tfooter{
         padding: 40px 0 0 0;
         text-align: center; 
+    }
+    .administar{
+        padding: 0 0 0 0;
+        text-align:center;
     }
     .row{
         text-align: center; 

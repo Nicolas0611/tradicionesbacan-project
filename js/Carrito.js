@@ -2,7 +2,8 @@ var db = firebase.firestore();
 var tabla = document.getElementById('producto');
 
 const ContenedoresDeItems = document.getElementById('Carrito2');
-
+const ContenedoresDeItems2 = document.getElementById('CotizacionCarro');
+const TituloCotizacion = document.querySelector('title').textContent;
 var button;
 var item;
 var itemTitulo;
@@ -11,6 +12,7 @@ var itemImagen;
 cargarEventos();
 function cargarEventos() {
     document.addEventListener('DOMContentLoaded', leerLocalStorage());
+    document.addEventListener('DOMContentLoaded', CheckOutVacio());
     console.log("Leer local storage");
 }
 function btn_agregar_detalles(event, ItemID) {
@@ -71,6 +73,7 @@ function addItemAlCarrito(itemTitulo, itemPrecio, itemImagen, itemID) {
         }
     }
     const FilaCarrito = document.createElement('div');
+    
     const ContenidoCarrito = `
     <table class= "lista-carrito">
         <thead>
@@ -102,8 +105,7 @@ function addItemAlCarrito(itemTitulo, itemPrecio, itemImagen, itemID) {
         itemID
     }
     FilaCarrito.innerHTML = ContenidoCarrito;
-    ContenedoresDeItems.append(FilaCarrito);
-
+    ContenedoresDeItems.append(FilaCarrito); 
     guardarProductosLocalStorage(producto);
     FilaCarrito.querySelector('.borrar-producto').addEventListener('click', removeShoppingCartItem);
     FilaCarrito.querySelector('.ItemCantidad').addEventListener('change', quantityChanged)
@@ -111,7 +113,12 @@ function addItemAlCarrito(itemTitulo, itemPrecio, itemImagen, itemID) {
 }
 function ActualizarTotal() {
     let Total = 0;
+    let Total2 = 0;
     const TotalCarrito = document.querySelector('.total-carrito');
+    const TotalCotizacion = document.querySelector('.total-carrito-cotizacion');
+    const ItemsCotizacion = document.querySelectorAll('.ItemCotizacion');
+    const prueba = document.querySelectorAll('.ItemCantidad2')
+    console.log(prueba[0].value);
     const ItemsCarrito = document.querySelectorAll('.ItemCarrito');
 
     ItemsCarrito.forEach(ItemCarrito => {
@@ -121,7 +128,16 @@ function ActualizarTotal() {
         const shoppingCartItemQuantity = Number(shoppingCartItemQuantityElement.value);
         Total = Total + shoppingCartItemPrice * shoppingCartItemQuantity;
     });
+    ItemsCotizacion.forEach(ItemCotizacion => {
+        const shoppingCartItemPriceElement = ItemCotizacion.querySelector('.ItemPrecio2');
+        const shoppingCartItemPrice = Number(shoppingCartItemPriceElement.textContent.replace('Precio: $', ''));
+        const shoppingCartItemQuantityElement = ItemCotizacion.querySelector('.ItemCantidad2');
+        const shoppingCartItemQuantity = Number(shoppingCartItemQuantityElement.value);
+        Total2 = Total2 + shoppingCartItemPrice * shoppingCartItemQuantity;
+    });
     TotalCarrito.innerHTML = `Precio: $${Total.toFixed(2)}`
+    TotalCotizacion.innerHTML = `Precio: $${Total2.toFixed(2)}`
+    CheckOutVacio();
 }
 function removeShoppingCartItem(e) {
     let producto, productoID;
@@ -133,6 +149,23 @@ function removeShoppingCartItem(e) {
         productoID = producto.querySelector('a').getAttribute('data-id');
     }
     eliminarProductoLocalStorage(productoID);
+    if(TituloCotizacion =="Check-Out"){
+        location.reload();
+    }
+    CheckOutVacio()
+    ActualizarTotal();
+}
+function removeCotizacionCartItem(e) {
+    let producto, productoID;
+    const buttonClicked = e.target;
+    buttonClicked.closest('.lista-carrito').remove();
+    if (e.target.classList.contains('borrar-producto')) {
+        //e.target.parentElement.parentElement.remove();
+        producto = e.target.parentElement.parentElement;
+        productoID = producto.querySelector('a').getAttribute('data-id');
+    }
+    eliminarProductoLocalStorage(productoID);
+    location.reload();
     ActualizarTotal();
 }
 function quantityChanged(event) {
@@ -181,6 +214,14 @@ function eliminarProductoLocalStorage(productoID) {
     //Añadimos el arreglo actual al LS
     localStorage.setItem('productos', JSON.stringify(productosLS));
 }
+function CheckOutVacio(){
+    if (localStorage.getItem('productos') == "[]") {
+        document.querySelector('#CheckOut').hidden=true;
+    }
+    else{
+        document.querySelector('#CheckOut').hidden=false;
+    }
+}
 function leerLocalStorage() {
     const elementsTitle = ContenedoresDeItems.getElementsByClassName('ItemTitulo');
     for (let i = 0; i < elementsTitle.length; i++) {
@@ -195,6 +236,7 @@ function leerLocalStorage() {
     productosLS = obtenerProductosLocalStorage();
     productosLS.forEach(function (producto) {
         const FilaCarrito = document.createElement('div');
+        const FilaCotzacion =document.createElement('div');
         const ContenidoCarrito = `
     <table class= "lista-carrito">
         <thead>
@@ -219,10 +261,40 @@ function leerLocalStorage() {
         </tbody>
     </table>
     `;
+    const ContenidoCotizacion = `
+    <table class= "lista-carrito">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>X</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class ="ItemCotizacion">
+                <td>
+                    <img src=${producto.itemImagen} width="100px">
+                </td>
+                <td class="ItemTitulo2">${producto.itemTitulo}</td>
+                <td class="ItemPrecio2">${producto.itemPrecio}</td>
+                <td><input class="ItemCantidad2" type="number" min= "1" max="100" value="1"></td>
+                <td><a href="javascript:void(0);" data-id="${producto.itemID}" class="borrar-producto2">X</a></td>
+            </tr>
+        </tbody>
+    </table>
+    `;
         FilaCarrito.innerHTML = ContenidoCarrito;
-        ContenedoresDeItems.append(FilaCarrito);
+        FilaCotzacion.innerHTML = ContenidoCotizacion;
+        console.log(ContenedoresDeItems);
+        console.log(ContenedoresDeItems2);
+        ContenedoresDeItems.appendChild(FilaCarrito);
+        ContenedoresDeItems2.appendChild(FilaCotzacion);
         FilaCarrito.querySelector('.borrar-producto').addEventListener('click', removeShoppingCartItem);
         FilaCarrito.querySelector('.ItemCantidad').addEventListener('change', quantityChanged)
+        FilaCotzacion.querySelector('.borrar-producto2').addEventListener('click', removeCotizacionCartItem);
+        FilaCotzacion.querySelector('.ItemCantidad2').addEventListener('change', quantityChanged);
         ActualizarTotal();
     });
 }
