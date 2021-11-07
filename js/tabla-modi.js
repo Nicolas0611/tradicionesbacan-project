@@ -1,8 +1,10 @@
 var Nusuario = document.querySelector('.Nuser')
 const TTA=document.querySelector(".TTA")
 const db = firebase.firestore();
+const storage = firebase.storage();
 var tabla = document.getElementById('datosTabla')
 var FormProduct=document.querySelector('.ModiProductos')
+var Pexiste
 
 const loginchec = user =>{
     if(user){
@@ -36,7 +38,7 @@ firebase.auth().onAuthStateChanged(user => {
 //------------------------------------ Datos de la tabla---------------------------------
 
 function llenartabla(){
-db.collection('Productos').get().then((snapshot) => {
+db.collection('Productos').onSnapshot((snapshot) => {
     tabla.innerHTML = '';
     snapshot.forEach((doc) => {
         console.log(doc.id, '=>', doc.data());
@@ -58,6 +60,15 @@ db.collection('Productos').get().then((snapshot) => {
             Modificarprod(e.target.dataset.id);
             })
         })
+
+        const btn_borrar = document.querySelectorAll('.btnBorrar')
+        btn_borrar.forEach(btn =>{
+            btn.addEventListener('click', (e)=>{
+            console.log("Npro", e.target.dataset.id)
+            Borrarprod(e.target.dataset.id);
+            })
+        })
+        
     })
 });
 }
@@ -71,13 +82,32 @@ $(document).ready(function() {
     });
 });
 
+function verificarP(){
+    db.collection('Productos').get().then((snapshot) => {
+        snapshot.forEach((doc) => {
+            if(IdPro.value == doc.id)
+                Pexiste=true;
+        })
+        if(Pexiste)
+            alert("El id de producto ya existe")
+        else{
+            console.log("Guardar producto")
+            agregarproducto();
+        }
+    })
+}
+
 FormProduct.addEventListener('submit', (e)=>{
     e.preventDefault();
     if(AProcucto==true){
-        console.log("Guardar producto")
+        Pexiste=false
+        verificarP();
     }
     else
     {
         console.log("Actualizar producto ", id_producto)
+        actualizarP();
+        if(selecionarch.value=="")
+        console.log("No arc")
     }
 })
