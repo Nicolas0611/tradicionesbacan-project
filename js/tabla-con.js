@@ -1,3 +1,34 @@
+var Nusuario = document.querySelector('.Nuser')
+const TTA=document.querySelector('#detalleconsultas')
+
+const loginchec = user =>{
+    if(user){
+        obtenerifuser()
+        console.log(email, uid)
+        Nusuario.innerHTML = '';
+        Nusuario.innerHTML += `
+            <h2>Hola ${user.email}</h2>
+        `;
+        TTA.hidden=false;
+    }
+    else{
+    Nusuario.innerHTML = '';
+    Nusuario.innerHTML += `
+        <h1>No ha iniciado sesion</h1>
+    `;
+    TTA.hidden=true;
+    }
+}
+
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        obtenerifuser();
+        loginchec(user);
+    } else {
+        loginchec(user);
+    }
+})
+
 
 $(document).ready(function () {
     var dataSet =[];

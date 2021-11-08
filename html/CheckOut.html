@@ -71,7 +71,7 @@
 
                                         </div>
                                         <p class="total-carrito">Total: </p>
-                                        <a href="#" id="vaciar-carrito" class="button u-full-wdth">Vaciar Carrito</a>
+                                        <a href="#" id="CheckOut" class="button u-full-wdth">Vaciar Carrito</a>
                                     </div>
                                 </a>
                             </li>
@@ -84,33 +84,15 @@
     <section>
         <div class="Cotizacion">
             <h1><b>Cotización</b></h1>
-            <table class="TablaCotizacion">
-                <thead>
-                    <tr>
-                        <th>Imagen</th>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th>X</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="ItemCarrito">
-                        <td>
-                            <img src="/tradicionesbacan-project/images/Cenefa_roja.png" width="100px">
-                        </td>
-                        <td class="ItemTitulo">Producto</td>
-                        <td class="ItemPrecio">$9800</td>
-                        <td><input class="ItemCantidad" type="number" min="1" max="100" value="1"></td>
-                        <td><a href="javascript:void(0);" class="borrar-producto">X</a></td>
-                    </tr>
-                </tbody>
-            </table>
-            <h2 class="Total">Total: $</h2>
+            <div id="CotizacionCarro">
+
+            </div>
+            <p class="total-carrito-cotizacion">Total: </p>
             <form id="FormularioCotizacion">
-                <h3>Nombre: <input type="text" class="Nombre" placeholder="Nombre completo"></input></h3>
-                <h3>Telefono: <input type="tel" class="Telefono" placeholder="300 0000000"></input></h3>
-                <h3>E-mail: <input type="email" class="Email" placeholder="Ejemplo@ejemplo.com"></input></h3>
+                <h3>Nombre: <input type="text" class="Nombre" placeholder="Nombre" maxlength="50" required></input></h3>
+                <h3>Apellido: <input type="text" class="Apellido" placeholder="Apellido" maxlength="50" required></input></h3>
+                <h3>Telefono: <input type="tel" class="Telefono" placeholder="300 0000000" maxlength="10" required></input></h3>
+                <h3>E-mail: <input type="email" class="Email" placeholder="Ejemplo@ejemplo.com" required></input></h3>
                 <div id="Botones">
                     <button id="Enviar" type="submit">Enviar</button>
                     <button id="Cancelar" type="button">Cancelar</button>
@@ -195,21 +177,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
 
-    <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyDN-SSy6iHLQkDNMWlr3MmEIaMEdQXBr-E",
-            authDomain: "productos-bacan.firebaseapp.com",
-            projectId: "productos-bacan",
-            storageBucket: "productos-bacan.appspot.com",
-            messagingSenderId: "158266501029",
-            appId: "1:158266501029:web:cde1d0bf064bc393192a4c",
-            measurementId: "G-J95XVPJPEZ",
-        };
-
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-    </script>
+    <script src="/tradicionesbacan-project/js/config.js"></script>
     <script src="/tradicionesbacan-project/js/Carrito.js"></script>
+    <script src="/tradicionesbacan-project/js/Cotizacion.js"></script>
 </body>

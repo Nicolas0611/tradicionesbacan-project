@@ -1,0 +1,46 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(/tradicionesbacan-project/images/FondoAdmin.jpg);
+}
+.Nuser{
+    padding: 170px 0 70px;
+    font-size: 64px;
+    text-align: center;
+}
+.cabeza-tabla{
+    margin: 10px;
+    display: flex;
+    gap:25px;
+    justify-content: flex-end;
+}
+.ContenidoTabla{
+    width: 100%;
+    margin: 25px 0;
+    font-size: 16px;
+}
+.ContenidoTabla thead tr{
+    background-color: #90B4F0;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+.ContenidoTabla tbody tr{
+    border-bottom: 1px solid #dddddd;
+    background-color: white;
+    text-align:left;
+}
+
+.ContenidoTabla th,
+.ContenidoTabla td {
+    padding: 12px 15px;
+}
+.ContenidoTabla td.IDC{
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
