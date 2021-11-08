@@ -23,8 +23,7 @@ FormCotizacion.addEventListener('submit', (e) => {
         fecha: firebase.firestore.FieldValue.serverTimestamp(),
         ProductosTotal,
         CantidadProductos,
-        precio: document.querySelector('.ItemPrecio2').textContent,
-        cantidad: document.querySelector('.ItemCantidad2').value
+        precio: document.querySelector('.total-carrito-cotizacion').textContent,
     };
     console.log(newCotizacion);
     FormCotizacion.reset();
