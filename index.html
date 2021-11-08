@@ -34,12 +34,6 @@
   <!--Barra de Navegacion-->
   <header class="header">
     <div class="container">
-      <div class="administar">
-        <a class="Nconexion">No hay conexion con la base de datos</a>
-        <a class="ingresar logged-out" data-bs-toggle="modal" data-bs-target="#SigninModal" style="display:none">Ingresar</a>
-        <a class="gestion logged-in" href="/tradicionesbacan-project/html/Gestionar.html" style="display:none">Gestionar</a>
-        <a class="salir logged-in" style="display:none">salir</a>
-      </div>
       <nav class="navbar navbar-expand-lg" style="background-color: #ffff">
         <div class="container-fluid">
           <a class="navbar-brand" href="/tradicionesbacan-project/index.html">
@@ -234,6 +228,30 @@
       </div>
     </div>
   </div>
+  
+  <!-- Modal Iniciar sesion -->
+  <div class="modal fade" id="SigninModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><a>Ingresar con tu cuenta Bacan</a></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form">
+            <div class="form-group">
+              <input type="email" id="loginemail" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="password" id="loginpassword" class="form-control" placeholder="Contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-block btn-ini">Iniciar sesion</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="text-white" style="background-color: #000f55">
     <div class="container">
       <div class="row">
@@ -256,6 +274,15 @@
             <li>
               <ion-icon name="mail-outline"></ion-icon>
               info@tradicionesbacan.com
+            </li><br>
+            <!--Gestionar TradicionesBacan-->
+            <li class="administar">Eres emplado Bacan?<br>
+              <a class="Nconexion">No hay conexion con la base de datos</a>
+              <a class="ingresar logged-out" data-bs-toggle="modal" data-bs-target="#SigninModal"
+                style="display: none">Ingresar</a>
+              <a class="gestion logged-in" href="/tradicionesbacan-project/html/Gestionar.html"
+                style="display:none">Gestionar</a><br>
+              <a class="salir logged-in"  style="display:none">salir</a>
             </li>
         </div>
         <div class="col-md-6 col-xl-4 text-reset align-items-center">
@@ -297,30 +324,6 @@
         </div>
       </div>
     </div>
-
-      <!-- Modal Iniciar sesion -->
-  <div class="modal fade" id="SigninModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><a>Ingresar con tu cuenta Bacan</a></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="login-form">
-            <div class="form-group">
-              <input type="email" id="loginemail" class="form-control" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-              <input type="password" id="loginpassword" class="form-control" placeholder="Contraseña" required>
-            </div>
-            <button type="submit" class="btn btn-block btn-ini">Iniciar sesion</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
   </footer>
   <!-- scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
