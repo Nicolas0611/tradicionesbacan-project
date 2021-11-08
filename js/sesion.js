@@ -66,6 +66,7 @@ logout.addEventListener('click', (e) => {
     firebase.auth().signOut().then(() => {
         // Sign-out successful.
         console.log('sign out')
+        window.location.href = "/tradicionesbacan-project/index.html"
     }).catch((error) => {
         // An error happened.
     });
