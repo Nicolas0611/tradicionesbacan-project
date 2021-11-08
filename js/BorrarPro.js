@@ -3,13 +3,14 @@ function Borrarprod(IDborrar){
         TConf.innerHTML = '';
         TConf.innerHTML = `Confirmar producto a borrar: ${IDborrar}`
         BConfir.innerHTML = '';
-        BConfir.innerHTML =`Va a borrar el producto: ${IDborrar} <br>Escriba confirmar y oprima el boton para borrar el producto
-                            <br><input type="text" id="confborrar" placeholder="confirmar">
+        BConfir.innerHTML =`Va a borrar el producto: ${IDborrar}<br>Recuerde que el producto se eliminara de forma definitiva
+                            <br><input type="checkbox" id="confborrar" placeholder="confirmar">
+                            ¿Acepta eliminar el producto?
                             <br><button type="button" class="btn-conf-borrar" disabled>Borrar producto</button>`;
         var confbo = document.querySelector('#confborrar')
         var btnborr = document.querySelector('.btn-conf-borrar')
-        confbo.addEventListener('input', (e)=> {
-            if(confbo.value == "confirmar")
+        confbo.addEventListener('change', (e)=> {
+            if(confbo.checked == true)
                 btnborr.disabled = false;
             else
                 btnborr.disabled = true;
@@ -31,6 +32,8 @@ function borrardefirebase(IDborrar){
                 // Uh-oh, an error occurred!
             });
             console.log("Document successfully deleted!"); 
+            alert("Producto borrado");
+            $('#Confirmacion').modal('hide');
         }).catch((error) => {
             console.error("Error removing document: ", error);
         });

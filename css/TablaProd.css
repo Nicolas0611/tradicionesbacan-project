@@ -12,12 +12,34 @@ body{
   text-align: center;
 }
 .TTA{
-  background-color: #fff;
   padding: 0px 0px 10px 0px;
 }
 
+.ContenidoTabla{
+  margin: 25px 10px;
+  font-size: 16px;
+  width: 99%;
+  min-width: 400px;
+}
+
+.ContenidoTabla thead tr{
+  background-color: #90B4F0;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+}
+
+.ContenidoTabla th,
+.ContenidoTabla td {
+    padding: 12px 15px;
+}
+.ContenidoTabla tbody tr{
+  border-bottom: 1px solid #dddddd;
+  background-color: white;
+  text-align:left;
+}
 .cabeza-tabla{
-  margin: 20px;
+  margin: 10px;
   display: flex;
   gap:25px;
   align-items: center;
@@ -34,61 +56,70 @@ body{
 }
 
 #Ttabla{
+  background-color: white;
 padding-left: 50px;
 padding-right: 50px;
-text-align: center;
 font-size: 18px;
 }
 
 #idT{
-  padding: 0px 50px 0px 50px;
+  text-align: left;
 }
 
 #nombreT{
- padding: 0px 250px 0px 250px;
+  text-align: left;
 }
 
 #precioT{
-padding: 0px 50px 0px 50px;
+  text-align: left;
 }
 
 #accionesT{
-  padding: 0px 50px 0px 50px;
+  text-align: center;
 }
 
 #accionT{
+  text-align: center;
   display: flex;
   justify-content: center;
-  padding-top: 3px;
 }
 
 .btnEditar{
   width: 20%;
+  height: max-content;
+  display: flex;
   text-align: right;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   background-color: #0d6efd;
-  color: whitesmoke;
+  color: white;
   border-style: none;
   justify-content: flex-end;
+  align-items: center;
+  padding: 5px 5px;
 }
 
 .btnEditar:hover{
-  background-color: #90B4F0;
+  background-color: #F8F496;
+  color: black;
 }
 
 .btnBorrar{
   width: 20%;
+  height: max-content;
   text-align: left;
+  display: flex;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: #0d6efd;
   color: white;
   border-style: none;
+  align-items: center;
+  padding: 5px 5px;
 }
 
 .btnBorrar:hover{
-  background-color: crimson;
+  background-color: #E1071A;
 }
 .boton-enviar{
   width: 100%;
@@ -105,9 +136,6 @@ padding: 0px 50px 0px 50px;
   background-color:rgb(5, 46, 5);
 }
 
-#datosTabla{
-  text-align:center;
-}
 
 .contenedor-confi {
   padding-top: 15px;
@@ -122,7 +150,6 @@ padding: 0px 50px 0px 50px;
   background-color: #fff;
   display: flex;
   padding-top: 25px;
-  
 }
 .previmagen {
     
@@ -193,9 +220,9 @@ input {
 #confborrar{
   border-radius: 3px;
   border: 1px solid;
-  width: 40%;
+  width: 3%;
   margin-left: 0px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .form-control1 {
@@ -216,7 +243,7 @@ textarea:invalid{
 }
 #Modalcon{
   width: 120%;
-  background-color: lightgray;
+  background-color: rgb(243, 243, 243);
 }
 #Confirmacion {
   text-align: center;
@@ -246,7 +273,7 @@ textarea:invalid{
   color: white;
 }
 .btn-conf-borrar{
-  background-color: darkred;
+  background-color: #E1071A;
   margin: 15px 0px;
   border-radius: 15px;
   padding: 7px 10px;

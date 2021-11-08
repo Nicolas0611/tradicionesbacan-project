@@ -39,6 +39,7 @@ function guardarenfirebase(data){
     db.collection("Productos").doc(IdPro.value).set(data)
     .then(() => {
         guardarimagen();
+        $('#ModalAgre').modal('hide');
         alert("Producto guardado");
     })
     .catch((error) => {

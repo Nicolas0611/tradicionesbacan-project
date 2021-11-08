@@ -47,8 +47,8 @@ db.collection('Productos').onSnapshot((snapshot) => {
                 <td> ${doc.id} </td>
                 <td> ${doc.data().Nombre} </td>
                 <td> ${doc.data().Precio} </td>
-                <td id="accionT"> <button class="btnEditar" data-id="${doc.id}" ><ion-icon name="create-outline"></ion-icon></button> 
-                <button class="btnBorrar" data-id="${doc.id}""><ion-icon name="trash-outline"></ion-icon></button> </td>
+                <td id="accionT"> <button class="btnEditar" data-id="${doc.id}" ><span class="material-icons">mode_edit_outline</span></button> 
+                <button class="btnBorrar" data-id="${doc.id}""><span class="material-icons">delete_forever</span></button> </td>
         </tr>
         `;
 

@@ -12,9 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
 
     <link rel="stylesheet" href="/tradicionesbacan-project/css/NavbarG.css" />
-    <link rel="stylesheet" href="/tradicionesbacan-project/css/footer.css" />
-    <link rel="stylesheet" href="/tradicionesbacan-project/css/Gestionar.css" />
-   
+    <link rel="stylesheet" href="/tradicionesbacan-project/css/TablaCoti.css" />
 
     <!--Fuentes de texto-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -74,36 +72,42 @@
     </div>
 
     <!--Contenido de las comiciones-->
-    <div class="contanedor-datos" id="detalleCarrito" >
-
-        <table id="table_id" class="display nowrap datatable-carrito" style="display: 100%;">
-            <thead>
+   <div class="contanedor-datos container" id="divcotiza" >
+        <div class="cabeza-tabla">
+            <input class="buscar-control" type="text" name="Codigo" id="Codigo" placeholder="Busqueda">
+            <div>
+                <a type="button" class="btn btn-primary boton-enviar" id="btnvolver"
+                    href="/tradicionesbacan-project/html/Gestionar.html">Volver</a>
+            </div>
+            <!-- Espacios para escritura de texto -->
+        </div>
+        <table class="ContenidoTabla">
+            <thead id="Ttabla">
                 <tr>
-                    <th>Id</th>
-                    <th>Usuario</th>
-                    <th>Id Kit</th>
-                    <th>Fecha</th>
-                    <th>Total</th>
-
+                    <th id="idT">id</th>
+                    <th id="nombreT">Nombre</th>
+                    <th id="apellidoT">Apellido</th>
+                    <th id="correoT">Correo</th>
+                    <th id="telefonoT">Telefono</th>
+                    <th id="productosT">Productos/
+                                        cantidad</th>
+                    <th id="totalT">Total</th>
+                    <th id="fechaT">Fecha</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="datosTabla">
                 <tr>
-                    <td>Row 1 Data 1</td>
-                    <td>Row 1 Data 2</td>
-                    <td>Row 1 Data 2</td>
-                    <td>Row 1 Data 2</td>
-                    <td>Row 1 Data 2</td>
-
-
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
-
-
             </tbody>
         </table>
-        <div>
-            <a type="button" class="btn btn-primary boton-enviar" id="btnvolver" href="/tradicionesbacan-project/html/Gestionar.html">Volver</a>
-        </div>
     </div>
 
 
@@ -157,9 +161,7 @@
         <!-- CUSTOM CODE-->
         <script src="/tradicionesbacan-project/js/config.js"></script>
         <script src="/tradicionesbacan-project/js/sesion.js"></script>
-        <script src="/tradicionesbacan-project/js/agregar producto.js"></script>
-        <script src="/tradicionesbacan-project/js/Gestion.js"></script>
-        <script src="/tradicionesbacan-project/js/Admin.js"></script>
+        <script src="/tradicionesbacan-project/js/tabla-cotiza.js"></script>
 
 
 </body>
