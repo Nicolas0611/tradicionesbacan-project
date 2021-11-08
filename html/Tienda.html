@@ -32,12 +32,6 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="administar">
-        <a class="Nconexion">No hay conexion con la base de datos</a>
-        <a class="ingresar logged-out" data-bs-toggle="modal" data-bs-target="#SigninModal" style="display:none">Ingresar</a>
-        <a class="gestion logged-in" href="/tradicionesbacan-project/html/Gestionar.html" style="display:none">Gestionar</a>
-        <a class="salir logged-in" style="display:none">salir</a>
-      </div>
       <nav class="navbar navbar-expand-lg" style="background-color: #ffff">
         <div class="container-fluid">
           <a class="navbar-brand" href="/tradicionesbacan-project/index.html">
@@ -74,6 +68,7 @@
                   <div id="Carrito2">
 
                   </div>
+                  
                   <p class="total-carrito">Total: </p>
                   <a href="/tradicionesbacan-project/html/CheckOut.html" id="CheckOut">Check-Out</a>
                 </div>
@@ -96,13 +91,17 @@
       </div>
     </div>
   </div>
-
+  <div id="CotizacionCarro">
+                    
+  </div>
+  <p class="total-carrito-cotizacion">Total: </p>
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title col-xl-6 col-md-8" id="exampleModalLabel">Modal title</h2>
+          <h2 class="modal-title col-xl-3 col-md-6" id="exampleModalLabel">Modal title</h2>
+          <h2 class="modal-title2 col-xl-6 col-md-6" id="exampleModalLabel2">Modal title</h2>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -116,6 +115,7 @@
 
               </ul>
               <div>
+                <h4><b>Precio:</b></h4>
                 <h4 class="precio">Precio</h4>
               </div>
             </div>
@@ -173,6 +173,15 @@
             <li>
               <ion-icon name="mail-outline"></ion-icon>
               info@tradicionesbacan.com
+            </li><br>
+            <!--Gestionar TradicionesBacan-->
+            <li class="administar">Eres emplado Bacan?<br>
+              <a class="Nconexion">No hay conexion con la base de datos</a>
+              <a class="ingresar logged-out" data-bs-toggle="modal" data-bs-target="#SigninModal"
+                style="display: none">Ingresar</a>
+              <a class="gestion logged-in" href="/tradicionesbacan-project/html/Gestionar.html"
+                style="display:none">Gestionar</a><br>
+              <a class="salir logged-in"  style="display:none">salir</a>
             </li>
         </div>
         <div class="col-md-6 col-xl-4 text-reset align-items-center">

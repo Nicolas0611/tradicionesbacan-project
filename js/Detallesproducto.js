@@ -1,19 +1,23 @@
 function escribirmodal(id_producto) {
     console.log("id producto", id_producto);
     titulomodal.innerHTML = '';
+    titulomodal2.innerHTML = '';
     modalcontenidoI.innerHTML = '';
     modaldescripcion.innerHTML = '';
     precio.innerHTML = '';
     db.collection("Productos").doc(id_producto).get().then((doc) => {
         titulomodal.innerHTML = `
-        ${doc.id}: ${doc.data().Nombre}
+        ${doc.id}:
         `;
         modalcontenidoI.innerHTML = `
             <img class="imgproductD" src="${doc.data().Imagen}" alt="">
         `;
 
+        titulomodal2.innerHTML = `
+        ${doc.data().Nombre}
+        `
         precio.innerHTML = `
-            <b>Precio: ${doc.data().Precio}</b>
+            <b>Precio: $${doc.data().Precio}</b>
         `
 
         botonesdetalles.innerHTML = `
@@ -22,12 +26,12 @@ function escribirmodal(id_producto) {
         `
 
         const btn_agregar = document.querySelectorAll('.boton_agregar')
-        btn_agregar.forEach(btn =>{
-            btn.addEventListener('click', (e)=>{
-            console.log(e.target.dataset.id)
-            btn_agregar_detalles(e);
+        btn_agregar.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                console.log(e.target.dataset.id)
+                btn_agregar_detalles(e,e.target.dataset.id);
+            })
         })
-    })
 
         console.log(doc.data().Descripcion.length)
 
