@@ -4,7 +4,7 @@
 header{
     z-index: 1;
     position: fixed;
-    height: 124px;
+    height: 115px;
     width: 100%;
     box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.25);
     background-color: #ffff
@@ -53,10 +53,10 @@ header{
     display: block;
     background-color: white;
     padding-bottom: 20px;
-    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.55);
     position: absolute;
     width: 510px;
-    height: 600px;
+    height: max-content;
     right: 1%;
     z-index: 1;
     overflow: hidden;
@@ -66,26 +66,47 @@ header{
 #Carrito2{
     text-align: center;
 }
-
 .lista-carrito{
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 16px;
+    width: 500px;
     min-width: 400px;
 }
 .lista-carrito thead tr{
-
-    text-align: left;
+    text-align: right;
+}
+.lista-carrito tbody tr{
+    text-align: center;
 }
 .lista-carrito th,
 .lista-carrito td{
     padding: 12px 15px;
+    max-width: 500px;
+    width: 300px;
 }
+
 #Carrito::-webkit-scrollbar{
     width: 10px; 
 }
 #Carrito::-webkit-scrollbar-thumb{
     background-color: lightgray;
+}
+#CarritoVacio{
+    color: #95B3DE;
+}
+#CarritoVacio h5{
+    color: #95B3DE;
+    font-size: 24px;
+    margin: 30px;
+    position: relative;
+    left: 10px;
+}
+#CotizacionCarro{
+    display: none;
+}
+#CarritoVacioImagen{
+    height: 200px;
 }
 .form-group{
     padding-bottom: 20px;

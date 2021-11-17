@@ -58,19 +58,22 @@
               <li class="nav-item">
                 <a class="nav-menu-link nav-link" href="/tradicionesbacan-project/html/Contacto.html">Contacto</a>
               </li>
-              <li class="sub-menu">
+              <li class="sub-menu nav-item">
                 <a class="nav-menu-link nav-link" href="javascript:void(0);">
                   <img src="/tradicionesbacan-project/images/216477_shopping_cart_icon.png" alt="" width="40"
                     height="auto" />
-                  <div id="Carrito">
-                    <h4>Carrito de compras</h4>
-                    <div id="Carrito2">
-
-                    </div>
-                    <p class="total-carrito">Total: </p>
-                    <a href="/tradicionesbacan-project/html/CheckOut.html" id="CheckOut">Check-Out</a>
-                  </div>
                 </a>
+                <div id="Carrito">
+                  <h4>Carrito de compras</h4>
+                  <div id="Carrito2">
+                    <div id='CarritoVacio'> 
+                      <img id="CarritoVacioImagen"src="/tradicionesbacan-project/images/Carrito_Vacio.png">
+                      <h5><b>Carrito Vacio</b></h5>
+                    </div>
+                  </div>
+                  <p class="total-carrito">Total: </p>
+                  <a href="/tradicionesbacan-project/html/CheckOut.html" id="CheckOut">Check-Out</a>
+                </div>
               </li>
             </ul>
           </div>
@@ -78,6 +81,9 @@
       </nav>
     </div>
   </header>
+  <div id="CotizacionCarro">
+    <p class="total-carrito-cotizacion">Total: </p>  
+  </div>
   <div id="Nempresa">
     <div id="NempresaT">
       <h1><b>Nuestra Empresa</b></h1>
@@ -137,7 +143,7 @@
     <div id="TienesPreguntasT">
       <h1><b>¿Tienes Preguntas?</b></h1>
       <h2>Escríbenos</h2>
-      <button id="WhatsApp" type="button">WhatsApp!</button>
+      <button id="WhatsApp" onclick="location.href='/tradicionesbacan-project/html/Contacto.html'" type="button">Contactanos!</button>
     </div>
     <img id="TienesPreguntasimg" src="/tradicionesbacan-project/images/TienesPreguntas.png" alt="" />
   </div>

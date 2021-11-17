@@ -44,3 +44,18 @@ body{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+.btnBorrar{
+    width: 80%;
+    height: max-content;
+    border-radius: 10px;
+    background-color: #0d6efd;
+    color: white;
+    border-style: none;
+    align-items: center;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+.btnBorrar:hover{
+    background-color: #E1071A;
+}

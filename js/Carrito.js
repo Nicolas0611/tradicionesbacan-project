@@ -78,11 +78,7 @@ function addItemAlCarrito(itemTitulo, itemPrecio, itemImagen, itemID) {
     <table class= "lista-carrito">
         <thead>
             <tr>
-                <th>Imagen</th>
-                <th>Producto</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th>X</th>
+         
             </tr>
         </thead>
         <tbody>
@@ -108,7 +104,7 @@ function addItemAlCarrito(itemTitulo, itemPrecio, itemImagen, itemID) {
     ContenedoresDeItems.append(FilaCarrito); 
     guardarProductosLocalStorage(producto);
     FilaCarrito.querySelector('.borrar-producto').addEventListener('click', removeShoppingCartItem);
-    FilaCarrito.querySelector('.ItemCantidad').addEventListener('change', quantityChanged)
+    FilaCarrito.querySelector('.ItemCantidad').addEventListener('change', quantityChanged);
     ActualizarTotal();
 }
 function ActualizarTotal() {
@@ -118,7 +114,7 @@ function ActualizarTotal() {
     const TotalCotizacion = document.querySelector('.total-carrito-cotizacion');
     const ItemsCotizacion = document.querySelectorAll('.ItemCotizacion');
     const prueba = document.querySelectorAll('.ItemCantidad2')
-    console.log(prueba[0].value);
+    //console.log(prueba[0].value);
     const ItemsCarrito = document.querySelectorAll('.ItemCarrito');
 
     ItemsCarrito.forEach(ItemCarrito => {
@@ -135,8 +131,8 @@ function ActualizarTotal() {
         const shoppingCartItemQuantity = Number(shoppingCartItemQuantityElement.value);
         Total2 = Total2 + shoppingCartItemPrice * shoppingCartItemQuantity;
     });
-    TotalCarrito.innerHTML = `Precio: $${Total.toFixed(2)}`
-    TotalCotizacion.innerHTML = `Precio: $${Total2.toFixed(2)}`
+    TotalCarrito.innerHTML = `Precio: $${Total.toFixed(3)}`
+    TotalCotizacion.innerHTML = `Precio: $${Total2.toFixed(3)}`
     CheckOutVacio();
 }
 function removeShoppingCartItem(e) {
@@ -217,9 +213,18 @@ function eliminarProductoLocalStorage(productoID) {
 function CheckOutVacio(){
     if (localStorage.getItem('productos') == "[]") {
         document.querySelector('#CheckOut').hidden=true;
+        document.getElementById('CarritoVacio').hidden=false;
+        document.querySelector('.total-carrito').hidden=true;
+        document.querySelector('#Carrito').style.height = "380px";
+        document.querySelector('.lista-carrito').hidden=true;
     }
     else{
         document.querySelector('#CheckOut').hidden=false;
+        document.querySelector('#CarritoVacio').hidden=true;
+        document.querySelector('.total-carrito').hidden=false;
+        document.querySelector('#Carrito').style.height = "auto";
+        document.querySelector('#Carrito').style.maxHeight = "600px";
+        document.querySelector('.lista-carrito').hidden=false;
     }
 }
 function leerLocalStorage() {
@@ -241,11 +246,7 @@ function leerLocalStorage() {
     <table class= "lista-carrito">
         <thead>
             <tr>
-                <th>Imagen</th>
-                <th>Producto</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th>X</th>
+
             </tr>
         </thead>
         <tbody>
@@ -265,11 +266,7 @@ function leerLocalStorage() {
     <table class= "lista-carrito">
         <thead>
             <tr>
-                <th>Imagen</th>
-                <th>Producto</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th>X</th>
+                
             </tr>
         </thead>
         <tbody>

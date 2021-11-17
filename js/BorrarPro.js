@@ -24,17 +24,17 @@ function Borrarprod(IDborrar){
 }
 
 function borrardefirebase(IDborrar){
-        db.collection("Productos").doc(IDborrar).delete().then(() => {
-            var desertRef = storage.ref('Imagenes productos/' + IDborrar);
-            desertRef.delete().then(function() {
-                // File deleted successfully
-            }).catch(function(error) {
-                // Uh-oh, an error occurred!
-            });
-            console.log("Document successfully deleted!"); 
-            alert("Producto borrado");
-            $('#Confirmacion').modal('hide');
-        }).catch((error) => {
-            console.error("Error removing document: ", error);
+    db.collection("Productos").doc(IDborrar).delete().then(() => {
+        var desertRef = storage.ref('Imagenes productos/' + IDborrar);
+        desertRef.delete().then(function() {
+            // File deleted successfully
+        }).catch(function(error) {
+            // Uh-oh, an error occurred!
         });
+        console.log("Document successfully deleted!"); 
+        alert("Producto borrado");
+        $('#Confirmacion').modal('hide');
+    }).catch((error) => {
+        console.error("Error removing document: ", error);
+    });
 }

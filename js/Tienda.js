@@ -15,11 +15,29 @@ window.addEventListener('DOMContentLoaded', (e) =>{
         tabla.innerHTML = '';
         snapshot.forEach((doc) => {
             //console.log(doc.id, '=>', doc.data());
+            var Precio=doc.data().Precio;
+            Precio=Precio.toString()
+            Precio=Precio.split('.').join('');
+            Precio=Precio.split('').reverse();
+            var paginador=Math.ceil(Precio.length/3);
+            var salida=[];
+            var p;
+            var aux='';
+            for(let i=0;i<paginador;i++){
+                for(let j=0;j<3;j++){
+                    if(Precio[j+(i*3)]!=undefined)
+                    aux+=Precio[j+(i*3)];
+                }
+                salida.push(aux);
+                aux='';
+                p=salida.join('.').split("").reverse().join('');
+            }
+
             tabla.innerHTML += `
             <div class="contenido">
                 <img class="imgproduct" src="${doc.data().Imagen}" alt="">
-                <h4 class="TituloP">${doc.data().Nombre}</h4> 
-                <h5 class="Precio">Precio: $${doc.data().Precio}</h5> 
+                <h4 class="TituloP">${doc.data().Nombre}</h4>
+                <h5 class="Precio">Precio: $${p}</h5> 
                 <a class="detalles" data-id="${doc.id}" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</a>
                 <button class="boton_agregar" data-id="${doc.id}">Agregar al carrito</button>
             </div>
@@ -42,6 +60,5 @@ window.addEventListener('DOMContentLoaded', (e) =>{
             })
 
         })
-    });
-    
+    });  
 })

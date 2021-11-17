@@ -2,6 +2,8 @@ var Nusuario = document.querySelector('.Nuser')
 const TTA=document.querySelector('#divcotiza')
 const db = firebase.firestore();
 var tabla = document.getElementById('datosTabla')
+var TConf = document.querySelector('#TituloConfirm')
+var BConfir=document.querySelector('#BodyConfirm')
 
 const loginchec = user =>{
     if(user){
@@ -50,6 +52,7 @@ function llenartabla(){
                     <td id="CanP${doc.id}"></td>
                     <td> ${doc.data().precio} </td>
                     <td id="F${doc.id}"></td>
+                    <td><button class="material-icons btnBorrar" data-id="${doc.id}" title="Borrar">delete_forever</button></td>
             </tr>
             `;
             var fecha = new Date(doc.data().fecha.seconds * 1000);
@@ -69,14 +72,63 @@ function llenartabla(){
                     productos.innerHTML +=`${doc.data().ProductosTotal[x]}: 
                     ${doc.data().CantidadProductos[x]}`;
             }
+
+            const btn_borrar = document.querySelectorAll('.btnBorrar')
+            btn_borrar.forEach(btn =>{
+                btn.addEventListener('click', (e)=>{
+                console.log("Npro", e.target.dataset.id)
+                Borrarprod(e.target.dataset.id);
+                })
+            })
         })
     });
 }
-    $(document).ready(function() {
-        $("#Codigo").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#datosTabla tr").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
+$(document).ready(function() {
+    $("#Codigo").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#datosTabla tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
+});
+
+function Borrarprod(IDborrar){
+    if(IDborrar != undefined){
+        TConf.innerHTML = '';
+        TConf.innerHTML = `Confirmar producto a borrar: ${IDborrar}`
+        BConfir.innerHTML = '';
+        BConfir.innerHTML =`Va a borrar el producto: ${IDborrar}<br>Recuerde que el producto se eliminara de forma definitiva
+                            <br><input type="checkbox" id="confborrar" placeholder="confirmar">
+                            ¿Acepta eliminar el producto?
+                            <br><button type="button" class="btn-conf-borrar" disabled>Borrar producto</button>`;
+        var confbo = document.querySelector('#confborrar')
+        var btnborr = document.querySelector('.btn-conf-borrar')
+        confbo.addEventListener('change', (e)=> {
+            if(confbo.checked == true)
+                btnborr.disabled = false;
+            else
+                btnborr.disabled = true;
+        })
+        btnborr.addEventListener('click',(e)=>{
+            e.preventDefault();
+            borrardefirebase(IDborrar);
+        })
+        $('#Confirmacion').modal('show');
+    }
+}
+
+function borrardefirebase(IDborrar){
+    db.collection("Productos").doc(IDborrar).delete().then(() => {
+        var desertRef = storage.ref('Imagenes productos/' + IDborrar);
+        desertRef.delete().then(function() {
+            // File deleted successfully
+        }).catch(function(error) {
+            // Uh-oh, an error occurred!
+        });
+        console.log("Document successfully deleted!"); 
+        alert("Producto borrado");
+        $('#Confirmacion').modal('hide');
+    }).catch((error) => {
+        console.error("Error removing document: ", error);
+    });
+}

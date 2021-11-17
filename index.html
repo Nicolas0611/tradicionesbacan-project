@@ -21,16 +21,14 @@
 
   <!--Boton de whatsapp-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <a href="https://api.whatsapp.com/send?phone=+573158503531" class="float" target="-blank">
-    <i class="fa fa-whatsapp my-float"></i>
-  </a>
 
-
-  <!--Rama Nicolas-->
   <title>Tradiciones Bacan</title>
 </head>
 
 <body>
+  <a href="https://api.whatsapp.com/send?phone=+573158503531" class="float" target="-blank">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
   <!--Barra de Navegacion-->
   <header class="header">
     <div class="container">
@@ -60,19 +58,22 @@
               <li class="nav-item">
                 <a class="nav-menu-link nav-link" href="/tradicionesbacan-project/html/Contacto.html">Contacto</a>
               </li>
-              <li class="sub-menu">
+              <li class="sub-menu nav-item">
                 <a class="nav-menu-link nav-link" href="javascript:void(0);">
                   <img src="/tradicionesbacan-project/images/216477_shopping_cart_icon.png" alt="" width="40"
                     height="auto" />
-                  <div id="Carrito">
-                    <h4>Carrito de compras</h4>
-                    <div id="Carrito2">
-
-                    </div>
-                    <p class="total-carrito">Total: </p>
-                    <a href="/tradicionesbacan-project/html/CheckOut.html" id="CheckOut">Check-Out</a>
-                  </div>
                 </a>
+                <div id="Carrito">
+                  <h4>Carrito de compras</h4>
+                  <div id="Carrito2">
+                    <div id='CarritoVacio'> 
+                      <img id="CarritoVacioImagen"src="/tradicionesbacan-project/images/Carrito_Vacio.png">
+                      <h5><b>Carrito Vacio</b></h5>
+                    </div>
+                  </div>
+                  <p class="total-carrito">Total: </p>
+                  <a href="/tradicionesbacan-project/html/CheckOut.html" id="CheckOut">Check-Out</a>
+                </div>
               </li>
             </ul>
           </div>
@@ -80,7 +81,9 @@
       </nav>
     </div>
   </header>
-
+  <div id="CotizacionCarro">
+    <p class="total-carrito-cotizacion">Total: </p>  
+  </div>
   <div id="ReviveLaTradicion">
     <img id="Portadaimg" src="/tradicionesbacan-project/images/Home1.jpeg" alt="" width="784" />
     <div id="ReviveLaTradicionT">
@@ -93,7 +96,7 @@
         de agüeros, ellos se sintieron útiles y colaboraron con la producción
         en éste año.
       </p>
-      <button id="boton" type="button">Compra ahora!</button>
+      <button id="boton" onclick="location.href='/tradicionesbacan-project/html/Tienda.html'" type="button">Compra ahora!</button>
     </div>
   </div>
   <div id="ProductosDestacados">
@@ -101,7 +104,7 @@
       <h2>Productos <b>Destacados</b></h2>
     </div>
     <div id="ProductosDestacadosT">
-      <div class="ProductoD">
+      <div class="ProductoD" onclick="location.href='/tradicionesbacan-project/html/Tienda.html'">
         <img class="Productoimg" src="/tradicionesbacan-project/images/Pandemio.jpeg" alt="" width="400"
           height="auto" />
         <div class="ProductoT">
@@ -112,7 +115,7 @@
           </p>
         </div>
       </div>
-      <div class="ProductoD">
+      <div class="ProductoD" onclick="location.href='/tradicionesbacan-project/html/Tienda.html'">
         <img class="Productoimg" src="/tradicionesbacan-project/images/mono_rojo.jpeg" alt="" width="400"
           height="auto" />
         <div class="ProductoT">
@@ -123,7 +126,7 @@
           </p>
         </div>
       </div>
-      <div class="ProductoD">
+      <div class="ProductoD" onclick="location.href='/tradicionesbacan-project/html/Tienda.html'">
         <img class="Productoimg" src="/tradicionesbacan-project/images/Cenefa_roja.png" alt="" width="400"
           height="auto" />
         <div class="ProductoT">

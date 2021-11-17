@@ -97,6 +97,7 @@ font-size: 18px;
   justify-content: flex-end;
   align-items: center;
   padding: 5px 5px;
+  cursor: pointer;
 }
 
 .btnEditar:hover{
@@ -116,6 +117,7 @@ font-size: 18px;
   border-style: none;
   align-items: center;
   padding: 5px 5px;
+  cursor: pointer;
 }
 
 .btnBorrar:hover{

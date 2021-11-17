@@ -2,6 +2,13 @@ var db = firebase.firestore();
 const FormCotizacion = document.querySelector('#FormularioCotizacion');
 var ProductosTotal=[];
 var CantidadProductos=[];
+
+document.addEventListener('DOMContentLoaded', mostrarCotizacion());
+
+function mostrarCotizacion(){
+    document.querySelector('#CotizacionCarro').style.display="initial";
+}
+
 function productoCotizacion(){
     let ArrayCantidad=document.querySelectorAll('.ItemCantidad2');
     let ArrayProductos=document.querySelectorAll('.borrar-producto2');
@@ -23,7 +30,7 @@ FormCotizacion.addEventListener('submit', (e) => {
         fecha: firebase.firestore.FieldValue.serverTimestamp(),
         ProductosTotal,
         CantidadProductos,
-        precio: document.querySelector('.total-carrito-cotizacion').textContent,
+        precio: document.querySelector('.total-carrito-cotizacion').textContent.replace('Precio: $', '')
     };
     console.log(newCotizacion);
     FormCotizacion.reset();

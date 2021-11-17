@@ -47,19 +47,18 @@ db.collection('Productos').onSnapshot((snapshot) => {
                 <td> ${doc.id} </td>
                 <td> ${doc.data().Nombre} </td>
                 <td> ${doc.data().Precio} </td>
-                <td id="accionT"> <button class="btnEditar" data-id="${doc.id}" ><span class="material-icons">mode_edit_outline</span></button> 
-                <button class="btnBorrar" data-id="${doc.id}""><span class="material-icons">delete_forever</span></button> </td>
+                <td id="accionT"> <button class="material-icons btnEditar" data-id="${doc.id}" title="Editar">mode_edit_outline</button>
+                <button class="material-icons btnBorrar" data-id="${doc.id}" title="Borrar">delete_forever</button></td>
         </tr>
         `;
 
         const btn_edit = document.querySelectorAll('.btnEditar')
         btn_edit.forEach(btn =>{
-            btn.addEventListener('click', (e)=>{
-            console.log("Npro", e.target.dataset.id)
-            id_producto=e.target.dataset.id;
-            Modificarprod(e.target.dataset.id);
-            })
+        btn.addEventListener('click', (e)=>{
+        console.log("Npro", e.target.getAttribute('data-id'))
+        Modificarprod(e.target.dataset.id);
         })
+    })
 
         const btn_borrar = document.querySelectorAll('.btnBorrar')
         btn_borrar.forEach(btn =>{
@@ -68,10 +67,11 @@ db.collection('Productos').onSnapshot((snapshot) => {
             Borrarprod(e.target.dataset.id);
             })
         })
-        
     })
 });
 }
+
+
 
 $(document).ready(function() {
     $("#Codigo").on("keyup", function() {
