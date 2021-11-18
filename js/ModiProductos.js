@@ -43,7 +43,8 @@ function actualizarP(){
         modificarnombre=true;
         BConfir.innerHTML +=`<br>Nombre del producto`;
     }
-    if(Propre != PrePro.value){
+    Precio=PrePro.value.split('.').join('');
+    if(Propre != Precio){
         modificarprecio=true;
         BConfir.innerHTML +=`<br>Precio del producto`;
     }
@@ -75,8 +76,11 @@ function actualizarP(){
 }
 
 function actualizarafirbase(){
-    if(modificarprecio)
-        db.collection("Productos").doc(IdPro.value).update({Precio: PrePro.value})
+    if(modificarprecio){
+        Precio=PrePro.value.split('.').join('');
+        Precio=parseInt(Precio)
+        db.collection("Productos").doc(IdPro.value).update({Precio: Precio})
+    }
     if(modificarnombre)
         db.collection("Productos").doc(IdPro.value).update({Nombre: NomPro.value})
     if(modificardescripcion){
@@ -101,3 +105,23 @@ function actualizarimagen(){
         alert("No se ha podido actulizar la imagen")
     });
 }
+
+PrePro.addEventListener('input' || 'change', (e)=>{
+    var Precio=e.target.value;
+    Precio=Precio.toString()
+    Precio=Precio.split('.').join('');
+    Precio=Precio.split('').reverse();
+    var paginador=Math.ceil(Precio.length/3);
+    var salida=[];
+    var p;
+    var aux='';
+    for(let i=0;i<paginador;i++){
+        for(let j=0;j<3;j++){
+            if(Precio[j+(i*3)]!=undefined)
+            aux+=Precio[j+(i*3)];
+        }
+        salida.push(aux);
+        aux='';
+        e.target.value=salida.join('.').split("").reverse().join('');
+    }
+})

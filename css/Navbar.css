@@ -74,14 +74,14 @@ header{
     min-width: 400px;
 }
 .lista-carrito thead tr{
-    text-align: right;
+    text-align: left;
 }
 .lista-carrito tbody tr{
-    text-align: center;
+    text-align: left;
 }
 .lista-carrito th,
 .lista-carrito td{
-    padding: 12px 15px;
+    padding: 5px 10px;
     max-width: 500px;
     width: 300px;
 }
@@ -120,3 +120,18 @@ header{
         padding: 0 30px ;
     }
 }
+@media screen and (max-width: 425px) {
+.lista-carrito th,
+.lista-carrito td{
+    padding: 0px 2px;
+    width: 60px;
+    font-size: 12px;
+}
+#CotizacionCarro{
+    width: 400px;
+}
+#FormularioCotizacion h3{
+    font-size: 16px;
+}
+}
+

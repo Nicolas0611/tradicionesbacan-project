@@ -41,12 +41,31 @@ function llenartabla(){
 db.collection('Productos').onSnapshot((snapshot) => {
     tabla.innerHTML = '';
     snapshot.forEach((doc) => {
+        
+        var Precio=doc.data().Precio;
+        Precio=Precio.toString()
+        Precio=Precio.split('.').join('');
+        Precio=Precio.split('').reverse();
+        var paginador=Math.ceil(Precio.length/3);
+        var salida=[];
+        var p;
+        var aux='';
+        for(let i=0;i<paginador;i++){
+            for(let j=0;j<3;j++){
+                if(Precio[j+(i*3)]!=undefined)
+                aux+=Precio[j+(i*3)];
+            }
+            salida.push(aux);
+            aux='';
+            p=salida.join('.').split("").reverse().join('');
+        }
+
         console.log(doc.id, '=>', doc.data());
         tabla.innerHTML += `
         <tr>
                 <td> ${doc.id} </td>
                 <td> ${doc.data().Nombre} </td>
-                <td> ${doc.data().Precio} </td>
+                <td> ${p} </td>
                 <td id="accionT"> <button class="material-icons btnEditar" data-id="${doc.id}" title="Editar">mode_edit_outline</button>
                 <button class="material-icons btnBorrar" data-id="${doc.id}" title="Borrar">delete_forever</button></td>
         </tr>
@@ -105,7 +124,6 @@ FormProduct.addEventListener('submit', (e)=>{
     }
     else
     {
-        console.log("Actualizar producto ", id_producto)
         actualizarP();
         if(selecionarch.value=="")
         console.log("No arc")

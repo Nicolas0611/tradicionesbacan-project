@@ -138,7 +138,6 @@ font-size: 18px;
   background-color:rgb(5, 46, 5);
 }
 
-
 .contenedor-confi {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -184,14 +183,12 @@ font-size: 18px;
 }
 .container-Text-area {
   width: 60%;
-  
   margin-left: 10px;
   margin-top: 10px;
 }
 .container-P {
   width: 30%;
   text-align: right;
-  
   margin-top: 10px;
 }
 
@@ -251,15 +248,6 @@ textarea:invalid{
   text-align: center;
 }
 
-@media screen and (min-width: 768px) { 
-  #Confirmacion:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: " ";
-    height: 100%;
-  }
-}
-
 #modalP {
   display: inline-block;
   text-align: left;
@@ -284,4 +272,12 @@ textarea:invalid{
 }
 .btn-conf-borrar:disabled{
   background-color: rgba(253, 142, 142, 0.514);
+}
+@media screen and (min-width: 768px) { 
+  #Confirmacion:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
 }

@@ -40,6 +40,9 @@ a.gestion{
     background-color: #364cb9;
     color: white;
 }
+.salir{
+    cursor: pointer;
+}
 @media screen and (max-width: 780px) {
     .administar{
         padding-right: 12px;

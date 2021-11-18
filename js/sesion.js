@@ -45,6 +45,7 @@ signinForm.addEventListener('submit', (e) => {
             signinForm.reset();
             //Cerrar Modal
             myModal.hide()
+            window.location.href = "/tradicionesbacan-project/html/Gestionar.html"
         })
         .catch((error) => {
             var errorCode = error.code;

@@ -95,9 +95,9 @@ $(document).ready(function() {
 function Borrarprod(IDborrar){
     if(IDborrar != undefined){
         TConf.innerHTML = '';
-        TConf.innerHTML = `Confirmar producto a borrar: ${IDborrar}`
+        TConf.innerHTML = `Confirmar cotizacion a borrar: ${IDborrar}`
         BConfir.innerHTML = '';
-        BConfir.innerHTML =`Va a borrar el producto: ${IDborrar}<br>Recuerde que el producto se eliminara de forma definitiva
+        BConfir.innerHTML =`Va a borrar la cotizacion con id: ${IDborrar}<br>Recuerde que la cotizacion se eliminara de forma definitiva
                             <br><input type="checkbox" id="confborrar" placeholder="confirmar">
                             ¿Acepta eliminar el producto?
                             <br><button type="button" class="btn-conf-borrar" disabled>Borrar producto</button>`;
@@ -118,15 +118,9 @@ function Borrarprod(IDborrar){
 }
 
 function borrardefirebase(IDborrar){
-    db.collection("Productos").doc(IDborrar).delete().then(() => {
-        var desertRef = storage.ref('Imagenes productos/' + IDborrar);
-        desertRef.delete().then(function() {
-            // File deleted successfully
-        }).catch(function(error) {
-            // Uh-oh, an error occurred!
-        });
+    db.collection("Cotizaciones").doc(IDborrar).delete().then(() => {
         console.log("Document successfully deleted!"); 
-        alert("Producto borrado");
+        //alert("Cotizacion borrada");
         $('#Confirmacion').modal('hide');
     }).catch((error) => {
         console.error("Error removing document: ", error);

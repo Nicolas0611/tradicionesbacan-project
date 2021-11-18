@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
 
     <link rel="stylesheet" href="/tradicionesbacan-project/css/NavbarG.css" />
-    <link rel="stylesheet" href="/tradicionesbacan-project/css/Gestionar.css" />
+    <link rel="stylesheet" href="/tradicionesbacan-project/css/Tconsultas.css" />
 
 
     <!--Fuentes de texto-->
@@ -71,17 +71,45 @@
             <h2>No ha iniciado sesion</h2>
         </div>
     </div>
-    
 
-    
-    <!--contenido de las consultas-->
-    <div class="contanedor-datos" id="detalleconsultas" >
-        <table id="table_con" class="display" style="width: 100%;"></table>
-        <div>
-            <a type="button" class="btn btn-primary boton-enviar" id="btnvolver" href="/tradicionesbacan-project/html/Gestionar.html">Volver</a>
+
+
+    <!--Contenido de las Consultas-->
+    <div class="contanedor-datos container" id="divcotiza" >
+        <div class="cabeza-tabla">
+            <input class="buscar-control" type="text" name="Codigo" id="Codigo" placeholder="Busqueda">
+            <div>
+                <a type="button" class="btn btn-primary boton-enviar" id="btnvolver"
+                    href="/tradicionesbacan-project/html/Gestionar.html">Volver</a>
+            </div>
+            <!-- Espacios para escritura de texto -->
         </div>
+        <table class="ContenidoTabla">
+            <thead id="Ttabla">
+                <tr>
+                    <th id="idT">id</th>
+                    <th id="nombreT">Nombre</th>
+                    <th id="apellidoT">Celular</th>
+                    <th id="correoT">Correo</th>
+                    <th id="telefonoT">Asunto</th>
+                    <th id="descripcionT">Descripción</th>
+                    <th id="fechaT">Fecha</th>
+                    <th>Borrar</th>
+                </tr>
+            </thead>
+            <tbody id="datosTabla">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-
 
 
     <!-- Modal -->
@@ -108,86 +136,17 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modalAltaEdicion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="contenedor-confi">
-                    <form class="subcontenedor-confi">
 
-                        <div class="subcontenedor-izq">
-
-                            <div>
-                                <div>
-                                    imagen del producto
-                                </div>
-                                <div class="contenedor-btn-enviar rows-forms">
-                                    <img src="https://via.placeholder.com/200" alt="" id="idimagen" class="previmagen">
-
-                                </div>
-                                <div class="archivos">
-                                    <input type="file" id="btnimagen" accept="image/*" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-descripcion">
-                            <!--ID-->
-                            <div class="rows-forms" id="grupo__txtnombre">
-                                <div class="container-P">
-                                    <p>ID</p>
-                                </div>
-                                <div class="container-imput">
-                                    <input type="text" class="formulario_input" name="txtnombre" id="txtnombre"
-                                        required>
-                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
-
-                                </div>
-
-                            </div>
-                            <!--Nombre del producto-->
-                            <div class="rows-forms">
-                                <div class="container-P">
-                                    <p>Nombre del producto </p>
-                                </div>
-                                <div class="container-imput">
-                                    <input type="text" id="txtasunto" required>
-                                </div>
-                            </div>
-                            <!--Descripcion-->
-                            <div class="rows-forms">
-                                <div class="container-P">
-                                    <p>Descripción</p>
-                                </div>
-                                <div class="container-Text-area">
-                                    <textarea class="form-control" id="txtdescripcion" rows="3" required></textarea>
-                                </div>
-                            </div>
-                            <!--Precio-->
-                            <div class="rows-forms">
-                                <div class="container-P">
-                                    <p>Precio </p>
-                                </div>
-                                <div class="container-imput" id="grupo__txtcelular">
-                                    <input type="number" class="formulario_input" name="txtcelular" id="txtcelular"
-                                        required>
-                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                </div>
-                            </div>
-                            <div class="botones">
-                                <div class="contenedor-btn-enviar rows-forms">
-                                    <button type="submit" class="btn btn-primary boton-azul"
-                                        id="btnguardar">Guardar</button>
-                                </div>
-                                <div class="contenedor-btn-enviar rows-forms">
-                                    <button type="button" class="btn btn-primary boton-gris">Cancelar</button>
-                                </div>
-                            </div>
-                            <div>
-                                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Actualizacion
-                                    exitosa</p>
-                            </div>
-                        </div>
-                    </form>
+    <!-- Modal Confirmacion -->
+    <div class="modal fade" id="Confirmacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" id="modalP">
+            <div class="modal-content" id="Modalcon">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloConfirm"><a>H</a></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="BodyConfirm">
+                    <button type="button" class="btn-confirmar-actualizacion">Confirmar cambios</button>
                 </div>
             </div>
         </div>
