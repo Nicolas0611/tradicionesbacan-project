@@ -25,9 +25,11 @@ selecionarch.addEventListener('change', (e) => {
 function agregarproducto()
 {
     var Descripcion = DesPro.value.split("\n")
+    var Precio=PrePro.value.split('.').join('');
+    Precio=parseInt(Precio)
     var datosG={
         'Nombre':NomPro.value,
-        'Precio':PrePro.value,
+        'Precio':Precio,
         'Descripcion':Descripcion
     };
     guardarenfirebase(datosG);
